@@ -785,7 +785,7 @@ button {
         "Space Grotesk",
         sans-serif;
     font-size:
-        5rem;
+        3rem;
 }
 
 
@@ -856,7 +856,7 @@ button {
     color:
         var(--muted);
     font-size:
-        1.4rem;
+        1rem;
     line-height:
         1.75;
 }
