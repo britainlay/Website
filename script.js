@@ -8,16 +8,14 @@
 ========================= */
 
 function openModal(modalId) {
-
+   
     const modal =
         document.getElementById(modalId);
-
+   
     if (!modal) {
         return;
     }
-
     modal.classList.add("active");
-
     document.body.style.overflow = "hidden";
 }
 
@@ -36,7 +34,6 @@ function closeModal(modalId) {
     }
 
     modal.classList.remove("active");
-
     document.body.style.overflow = "";
 }
 
@@ -54,11 +51,9 @@ document.addEventListener(
         ) {
 
             event.target.classList.remove("active");
-
             document.body.style.overflow = "";
 
         }
-
     }
 );
 
@@ -79,7 +74,7 @@ document.addEventListener(
                 );
 
             if (openModal) {
-
+               
                 openModal.classList.remove(
                     "active"
                 );
@@ -87,8 +82,6 @@ document.addEventListener(
                 document.body.style.overflow = "";
 
             }
-
         }
-
     }
 );
