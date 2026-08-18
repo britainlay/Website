@@ -1067,22 +1067,18 @@ button {
 }
 
 
-.finance-number {
-    position:
-        absolute;
-    right:
-        22px;
-    bottom:
-        17px;
-    color:
-        rgba(82,214,156,.18);
+.budget-finance-number {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--green);
     font-family:
-        "Space Grotesk",
+        "DM Sans",
         sans-serif;
-    font-size:
-        1.8rem;
-    font-weight:
-        700;
+    font-size: .78rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: .14em;
+    text-transform: uppercase;
 }
 
 
