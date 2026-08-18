@@ -42,133 +42,104 @@
         ===================================================== */
 
         .finance-page {
-
             padding-top: 120px;
             padding-bottom: 100px;
-
         }
 
 
         .finance-hero {
-
             max-width: 950px;
             margin: 0 auto;
             text-align: center;
             padding: 80px 20px 100px;
-
         }
 
 
         .finance-hero h1 {
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 clamp(3.5rem, 9vw, 7rem);
-
             line-height: .95;
-
             letter-spacing: -.06em;
-
             margin:
                 18px 0 28px;
-
         }
 
 
         .finance-hero h1 span {
-
             color: var(--green);
-
         }
 
 
         .finance-hero p {
-
             max-width: 700px;
-
             margin:
                 0 auto;
-
             color: var(--muted);
-
             font-size:
                 clamp(1.05rem, 2vw, 1.3rem);
-
             line-height: 1.75;
-
         }
 
 
         .finance-section {
-
             max-width: 1050px;
-
             margin:
                 0 auto;
-
             padding:
                 100px 25px;
-
         }
 
 
         .finance-section-header {
-
             margin-bottom:
                 45px;
-
         }
 
+        .budget-finance-number {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--green);
+            font-family:
+                "DM Sans",
+                sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
 
         .finance-number {
-
             display: block;
-
             margin-bottom: 12px;
-
             color: var(--green);
-
             font-size: .75rem;
-
             font-weight: 700;
-
             letter-spacing: .14em;
-
         }
 
 
         .finance-section-header h2 {
-
             margin: 0;
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 clamp(2rem, 5vw, 3.5rem);
-
             letter-spacing:
                 -.04em;
-
         }
 
 
         .finance-section-header p {
-
             max-width: 700px;
-
             margin-top: 18px;
-
             color: var(--muted);
-
             font-size: 1.05rem;
-
             line-height: 1.8;
-
         }
 
 
@@ -177,107 +148,73 @@
         ===================================================== */
 
         .money-flow {
-
             display: grid;
-
             grid-template-columns:
                 repeat(3, 1fr);
-
             gap: 20px;
-
         }
 
 
         .money-card {
-
             padding: 32px;
-
             border:
                 1px solid var(--border);
-
             border-radius:
                 20px;
-
             background:
                 rgba(255,255,255,.025);
-
             transition:
                 transform .25s ease,
                 border-color .25s ease,
                 background .25s ease;
-
         }
 
 
         .money-card:hover {
-
             transform:
                 translateY(-5px);
-
             border-color:
                 rgba(82,214,156,.4);
-
             background:
                 rgba(82,214,156,.035);
-
         }
 
 
         .money-icon {
-
             width: 48px;
-
             height: 48px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             margin-bottom: 22px;
-
             border-radius:
                 14px;
-
             background:
                 rgba(82,214,156,.1);
-
             color:
                 var(--green);
-
             font-size: 1.2rem;
-
             font-weight: 700;
-
         }
 
 
         .money-card h3 {
-
             margin:
                 0 0 10px;
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 1.35rem;
-
         }
 
 
         .money-card p {
-
             margin: 0;
-
             color:
                 var(--muted);
-
             line-height:
                 1.7;
-
         }
 
 
@@ -286,56 +223,40 @@
         ===================================================== */
 
         .benefit-grid {
-
             display: grid;
-
             grid-template-columns:
                 repeat(2, 1fr);
-
             gap: 20px;
-
         }
 
 
         .benefit-card {
-
             padding:
                 30px;
-
             border:
                 1px solid var(--border);
-
             border-radius:
                 18px;
-
         }
 
 
         .benefit-card h3 {
-
             margin:
                 0 0 10px;
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 1.3rem;
-
         }
 
 
         .benefit-card p {
-
             margin: 0;
-
             color:
                 var(--muted);
-
             line-height:
                 1.75;
-
         }
 
 
@@ -344,143 +265,97 @@
         ===================================================== */
 
         .budget-timeline {
-
             position:
                 relative;
-
             margin-top:
                 30px;
-
         }
 
 
         .budget-timeline::before {
-
             content: "";
-
             position: absolute;
-
             left: 24px;
-
             top: 0;
-
             bottom: 0;
-
             width: 1px;
-
             background:
                 var(--border);
-
         }
 
 
         .timeline-item {
-
             position:
                 relative;
-
             display: grid;
-
             grid-template-columns:
                 50px 1fr;
-
             gap: 25px;
-
             margin-bottom:
                 45px;
-
         }
 
 
         .timeline-number {
-
             position:
                 relative;
-
             z-index: 2;
-
             width: 50px;
-
             height: 50px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             border:
                 1px solid var(--green);
-
             border-radius:
                 50%;
-
             background:
                 var(--bg);
-
             color:
                 var(--green);
-
             font-weight:
                 700;
-
         }
 
 
         .timeline-content {
-
             padding:
                 5px 0;
-
         }
 
 
         .timeline-content h3 {
-
             margin:
                 0 0 10px;
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 1.5rem;
-
         }
 
 
         .timeline-content p {
-
             max-width:
                 700px;
-
             margin:
                 0 0 14px;
-
             color:
                 var(--muted);
-
             line-height:
                 1.8;
-
         }
 
 
         .timeline-content ul {
-
             margin:
                 0;
-
             padding-left:
                 20px;
-
             color:
                 var(--muted);
-
             line-height:
                 1.9;
-
         }
 
 
@@ -489,147 +364,107 @@
         ===================================================== */
 
         .budget-example {
-
             display:
                 grid;
-
             grid-template-columns:
                 .8fr 1.2fr;
-
             gap:
                 25px;
-
             align-items:
                 stretch;
-
         }
 
 
         .income-box {
-
             padding:
                 40px;
-
             border:
                 1px solid var(--border);
-
             border-radius:
                 22px;
-
             background:
                 linear-gradient(
                     145deg,
                     rgba(82,214,156,.1),
                     rgba(255,255,255,.02)
                 );
-
         }
 
 
         .income-label {
-
             color:
                 var(--muted);
-
             font-size:
                 .8rem;
-
             font-weight:
                 700;
-
             letter-spacing:
                 .12em;
-
         }
 
 
         .income-amount {
-
             margin:
                 12px 0;
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 clamp(3rem, 6vw, 5rem);
-
             font-weight:
                 600;
-
             letter-spacing:
                 -.05em;
-
         }
 
 
         .income-note {
-
             color:
                 var(--muted);
-
             line-height:
                 1.7;
-
         }
 
 
         .budget-table {
-
             overflow:
                 hidden;
-
             border:
                 1px solid var(--border);
-
             border-radius:
                 22px;
-
         }
 
 
         .budget-row {
-
             display:
                 flex;
-
             justify-content:
                 space-between;
-
             align-items:
                 center;
-
             padding:
                 20px 25px;
-
             border-bottom:
                 1px solid var(--border);
-
         }
 
 
         .budget-row:last-child {
-
             border-bottom:
                 none;
-
         }
 
 
         .budget-row span:first-child {
-
             color:
                 var(--muted);
-
         }
 
 
         .budget-row span:last-child {
-
             font-weight:
                 700;
-
         }
 
 
@@ -638,96 +473,69 @@
         ===================================================== */
 
         .my-take {
-
             display:
                 grid;
-
             grid-template-columns:
                 1.2fr .8fr;
-
             gap:
                 40px;
-
             align-items:
                 center;
-
         }
 
 
         .my-take-quote {
-
             padding:
                 40px;
-
             border-left:
                 3px solid var(--green);
-
             background:
                 rgba(255,255,255,.025);
-
             border-radius:
                 0 20px 20px 0;
-
         }
 
 
         .my-take-quote p {
-
             margin: 0;
-
             font-size:
                 clamp(1.2rem, 2.5vw, 1.65rem);
-
             line-height:
                 1.65;
-
         }
 
 
         .my-take-points {
-
             display:
                 grid;
-
             gap:
                 15px;
-
         }
 
 
         .take-point {
-
             padding:
                 22px;
-
             border:
                 1px solid var(--border);
-
             border-radius:
                 16px;
-
         }
 
 
         .take-point strong {
-
             display:
                 block;
-
             margin-bottom:
                 6px;
-
         }
 
 
         .take-point span {
-
             color:
                 var(--muted);
-
             line-height:
                 1.6;
-
         }
 
 
@@ -736,75 +544,54 @@
         ===================================================== */
 
         .mistake-grid {
-
             display:
                 grid;
-
             grid-template-columns:
                 repeat(2, 1fr);
-
             gap:
                 20px;
-
         }
 
 
         .mistake-card {
-
             padding:
                 30px;
-
             border:
                 1px solid var(--border);
-
             border-radius:
                 18px;
-
         }
 
 
         .mistake-card .mistake-number {
-
             color:
                 var(--green);
-
             font-size:
                 .75rem;
-
             font-weight:
                 700;
-
             letter-spacing:
                 .12em;
-
         }
 
 
         .mistake-card h3 {
-
             margin:
                 12px 0 10px;
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 1.3rem;
-
         }
 
 
         .mistake-card p {
-
             margin: 0;
-
             color:
                 var(--muted);
-
             line-height:
                 1.75;
-
         }
 
 
@@ -813,111 +600,79 @@
         ===================================================== */
 
         .resource-grid {
-
             display:
                 grid;
-
             grid-template-columns:
                 repeat(3, 1fr);
-
             gap:
                 20px;
-
         }
 
 
         .resource-card {
-
             display:
                 flex;
-
             flex-direction:
                 column;
-
             justify-content:
                 space-between;
-
             min-height:
                 220px;
-
             padding:
                 28px;
-
             border:
                 1px solid var(--border);
-
             border-radius:
                 20px;
-
             text-decoration:
                 none;
-
             color:
                 inherit;
-
             background:
                 rgba(255,255,255,.02);
-
             transition:
                 transform .25s ease,
                 border-color .25s ease;
-
         }
 
 
         .resource-card:hover {
-
             transform:
                 translateY(-5px);
-
             border-color:
                 rgba(82,214,156,.45);
-
         }
 
 
         .resource-card h3 {
-
             margin:
                 0 0 10px;
-
             font-family:
                 "Space Grotesk",
                 sans-serif;
-
             font-size:
                 1.3rem;
-
         }
 
 
         .resource-card p {
-
             margin: 0;
-
             color:
                 var(--muted);
-
             line-height:
                 1.7;
-
         }
 
 
         .resource-link {
-
             margin-top:
                 25px;
-
             color:
                 var(--green);
-
             font-size:
                 .85rem;
-
             font-weight:
                 700;
-
         }
 
 
@@ -928,18 +683,14 @@
         @media (max-width: 800px) {
 
             .finance-page {
-
                 padding-top:
                     80px;
-
             }
 
 
             .finance-hero {
-
                 padding:
                     60px 20px 70px;
-
             }
 
 
@@ -947,74 +698,54 @@
             .benefit-grid,
             .mistake-grid,
             .resource-grid {
-
                 grid-template-columns:
                     1fr;
-
             }
 
 
             .budget-example,
             .my-take {
-
                 grid-template-columns:
                     1fr;
-
             }
 
 
             .finance-section {
-
                 padding:
                     70px 20px;
-
             }
-
         }
 
 
         @media (max-width: 500px) {
-
             .budget-timeline::before {
-
                 left:
                     19px;
-
             }
 
 
             .timeline-item {
-
                 grid-template-columns:
                     40px 1fr;
-
                 gap:
                     18px;
-
             }
 
 
             .timeline-number {
-
                 width:
                     40px;
-
                 height:
                     40px;
-
                 font-size:
                     .8rem;
-
             }
 
 
             .income-box {
-
                 padding:
                     30px;
-
             }
-
         }
 
     </style>
@@ -1072,9 +803,7 @@
         Budget<span>ing.</span>
     </h1>
 
-
     <p>
-
         Build a plan for your money before
         your money decides where to go.
 
@@ -1082,7 +811,6 @@
         yourself. It's about understanding
         your money and making intentional
         decisions with it.
-
     </p>
 
 </section>
@@ -1106,9 +834,7 @@
             What is budgeting?
         </h2>
 
-
         <p>
-
             Budgeting is creating a plan for
             how you will use your money.
 
@@ -1116,7 +842,6 @@
             money went at the end of the month,
             a budget helps you decide where it
             should go before you spend it.
-
         </p>
 
     </div>
