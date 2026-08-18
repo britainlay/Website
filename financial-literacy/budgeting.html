@@ -12,11 +12,13 @@
 
     <title>Budgeting | Brighton Le</title>
 
+    <!-- Main portfolio stylesheet -->
     <link
         rel="stylesheet"
         href="../style.css"
     >
 
+    <!-- Fonts -->
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -33,11 +35,999 @@
         rel="stylesheet"
     >
 
+    <style>
+
+        /* =====================================================
+           BUDGETING PAGE
+        ===================================================== */
+
+        .finance-page {
+
+            padding-top: 120px;
+            padding-bottom: 100px;
+
+        }
+
+
+        .finance-hero {
+
+            max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 80px 20px 100px;
+
+        }
+
+
+        .finance-hero h1 {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(3.5rem, 9vw, 7rem);
+
+            line-height: .95;
+
+            letter-spacing: -.06em;
+
+            margin:
+                18px 0 28px;
+
+        }
+
+
+        .finance-hero h1 span {
+
+            color: var(--green);
+
+        }
+
+
+        .finance-hero p {
+
+            max-width: 700px;
+
+            margin:
+                0 auto;
+
+            color: var(--muted);
+
+            font-size:
+                clamp(1.05rem, 2vw, 1.3rem);
+
+            line-height: 1.75;
+
+        }
+
+
+        .finance-section {
+
+            max-width: 1050px;
+
+            margin:
+                0 auto;
+
+            padding:
+                100px 25px;
+
+        }
+
+
+        .finance-section-header {
+
+            margin-bottom:
+                45px;
+
+        }
+
+
+        .finance-number {
+
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: var(--green);
+
+            font-size: .75rem;
+
+            font-weight: 700;
+
+            letter-spacing: .14em;
+
+        }
+
+
+        .finance-section-header h2 {
+
+            margin: 0;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(2rem, 5vw, 3.5rem);
+
+            letter-spacing:
+                -.04em;
+
+        }
+
+
+        .finance-section-header p {
+
+            max-width: 700px;
+
+            margin-top: 18px;
+
+            color: var(--muted);
+
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           MONEY FLOW
+        ===================================================== */
+
+        .money-flow {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .money-card {
+
+            padding: 32px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+            background:
+                rgba(255,255,255,.025);
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+
+        }
+
+
+        .money-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(82,214,156,.4);
+
+            background:
+                rgba(82,214,156,.035);
+
+        }
+
+
+        .money-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 22px;
+
+            border-radius:
+                14px;
+
+            background:
+                rgba(82,214,156,.1);
+
+            color:
+                var(--green);
+
+            font-size: 1.2rem;
+
+            font-weight: 700;
+
+        }
+
+
+        .money-card h3 {
+
+            margin:
+                0 0 10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.35rem;
+
+        }
+
+
+        .money-card p {
+
+            margin: 0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           WHY BUDGETING
+        ===================================================== */
+
+        .benefit-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .benefit-card {
+
+            padding:
+                30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                18px;
+
+        }
+
+
+        .benefit-card h3 {
+
+            margin:
+                0 0 10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.3rem;
+
+        }
+
+
+        .benefit-card p {
+
+            margin: 0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.75;
+
+        }
+
+
+        /* =====================================================
+           TIMELINE
+        ===================================================== */
+
+        .budget-timeline {
+
+            position:
+                relative;
+
+            margin-top:
+                30px;
+
+        }
+
+
+        .budget-timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 24px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 1px;
+
+            background:
+                var(--border);
+
+        }
+
+
+        .timeline-item {
+
+            position:
+                relative;
+
+            display: grid;
+
+            grid-template-columns:
+                50px 1fr;
+
+            gap: 25px;
+
+            margin-bottom:
+                45px;
+
+        }
+
+
+        .timeline-number {
+
+            position:
+                relative;
+
+            z-index: 2;
+
+            width: 50px;
+
+            height: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border:
+                1px solid var(--green);
+
+            border-radius:
+                50%;
+
+            background:
+                var(--bg);
+
+            color:
+                var(--green);
+
+            font-weight:
+                700;
+
+        }
+
+
+        .timeline-content {
+
+            padding:
+                5px 0;
+
+        }
+
+
+        .timeline-content h3 {
+
+            margin:
+                0 0 10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.5rem;
+
+        }
+
+
+        .timeline-content p {
+
+            max-width:
+                700px;
+
+            margin:
+                0 0 14px;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .timeline-content ul {
+
+            margin:
+                0;
+
+            padding-left:
+                20px;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.9;
+
+        }
+
+
+        /* =====================================================
+           STUDENT BUDGET
+        ===================================================== */
+
+        .budget-example {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            gap:
+                25px;
+
+            align-items:
+                stretch;
+
+        }
+
+
+        .income-box {
+
+            padding:
+                40px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(82,214,156,.1),
+                    rgba(255,255,255,.02)
+                );
+
+        }
+
+
+        .income-label {
+
+            color:
+                var(--muted);
+
+            font-size:
+                .8rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .income-amount {
+
+            margin:
+                12px 0;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(3rem, 6vw, 5rem);
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                -.05em;
+
+        }
+
+
+        .income-note {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .budget-table {
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                22px;
+
+        }
+
+
+        .budget-row {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            padding:
+                20px 25px;
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .budget-row:last-child {
+
+            border-bottom:
+                none;
+
+        }
+
+
+        .budget-row span:first-child {
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .budget-row span:last-child {
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           MY TAKE
+        ===================================================== */
+
+        .my-take {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.2fr .8fr;
+
+            gap:
+                40px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .my-take-quote {
+
+            padding:
+                40px;
+
+            border-left:
+                3px solid var(--green);
+
+            background:
+                rgba(255,255,255,.025);
+
+            border-radius:
+                0 20px 20px 0;
+
+        }
+
+
+        .my-take-quote p {
+
+            margin: 0;
+
+            font-size:
+                clamp(1.2rem, 2.5vw, 1.65rem);
+
+            line-height:
+                1.65;
+
+        }
+
+
+        .my-take-points {
+
+            display:
+                grid;
+
+            gap:
+                15px;
+
+        }
+
+
+        .take-point {
+
+            padding:
+                22px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+        }
+
+
+        .take-point strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                6px;
+
+        }
+
+
+        .take-point span {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.6;
+
+        }
+
+
+        /* =====================================================
+           MISTAKES
+        ===================================================== */
+
+        .mistake-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .mistake-card {
+
+            padding:
+                30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                18px;
+
+        }
+
+
+        .mistake-card .mistake-number {
+
+            color:
+                var(--green);
+
+            font-size:
+                .75rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .mistake-card h3 {
+
+            margin:
+                12px 0 10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.3rem;
+
+        }
+
+
+        .mistake-card p {
+
+            margin: 0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.75;
+
+        }
+
+
+        /* =====================================================
+           RESOURCES
+        ===================================================== */
+
+        .resource-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .resource-card {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+
+            min-height:
+                220px;
+
+            padding:
+                28px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+            text-decoration:
+                none;
+
+            color:
+                inherit;
+
+            background:
+                rgba(255,255,255,.02);
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease;
+
+        }
+
+
+        .resource-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(82,214,156,.45);
+
+        }
+
+
+        .resource-card h3 {
+
+            margin:
+                0 0 10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.3rem;
+
+        }
+
+
+        .resource-card p {
+
+            margin: 0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .resource-link {
+
+            margin-top:
+                25px;
+
+            color:
+                var(--green);
+
+            font-size:
+                .85rem;
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .finance-page {
+
+                padding-top:
+                    80px;
+
+            }
+
+
+            .finance-hero {
+
+                padding:
+                    60px 20px 70px;
+
+            }
+
+
+            .money-flow,
+            .benefit-grid,
+            .mistake-grid,
+            .resource-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .budget-example,
+            .my-take {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .finance-section {
+
+                padding:
+                    70px 20px;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .budget-timeline::before {
+
+                left:
+                    19px;
+
+            }
+
+
+            .timeline-item {
+
+                grid-template-columns:
+                    40px 1fr;
+
+                gap:
+                    18px;
+
+            }
+
+
+            .timeline-number {
+
+                width:
+                    40px;
+
+                height:
+                    40px;
+
+                font-size:
+                    .8rem;
+
+            }
+
+
+            .income-box {
+
+                padding:
+                    30px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="navbar">
 
@@ -47,7 +1037,7 @@
             href="../index.html"
             class="logo"
         >
-            Brighton L<span>.</span>
+            BL<span>.</span>
         </a>
 
 
@@ -59,97 +1049,993 @@
         </a>
 
     </div>
+
 </header>
 
 
 
-<main>
+<main class="finance-page">
 
-<section class="section">
 
-    <div
-        class="section-container"
-        style="max-width: 850px;"
-    >
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        <span class="eyebrow">
-            FINANCIAL LITERACY / 01
+<section class="finance-hero">
+
+    <span class="eyebrow">
+        FINANCIAL LITERACY / 01
+    </span>
+
+
+    <h1>
+        Budget<span>ing.</span>
+    </h1>
+
+
+    <p>
+
+        Build a plan for your money before
+        your money decides where to go.
+
+        Budgeting isn't about restricting
+        yourself. It's about understanding
+        your money and making intentional
+        decisions with it.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     01 — WHAT IS BUDGETING?
+===================================================== -->
+
+<section class="finance-section">
+
+    <div class="finance-section-header">
+
+        <span class="finance-number">
+            01 — THE BASICS
         </span>
 
 
-        <h1
-            style="
-                font-family: 'Space Grotesk', sans-serif;
-                font-size: clamp(3rem, 7vw, 5rem);
-                line-height: 1;
-                letter-spacing: -.05em;
-                margin-bottom: 25px;
-            "
-        >
-            Budgeting
-        </h1>
+        <h2>
+            What is budgeting?
+        </h2>
 
 
-        <p
-            style="
-                color: var(--muted);
-                font-size: 1.15rem;
-                max-width: 700px;
-            "
-        >
-            A future financial literacy project by Brighton Le.
-            Content coming soon.
+        <p>
+
+            Budgeting is creating a plan for
+            how you will use your money.
+
+            Instead of wondering where your
+            money went at the end of the month,
+            a budget helps you decide where it
+            should go before you spend it.
+
         </p>
 
-
-        <div
-            style="
-                margin-top: 60px;
-                padding: 30px;
-                border: 1px solid var(--border);
-                border-radius: 18px;
-                background: rgba(255,255,255,.025);
-            "
-        >
-
-            <h2
-                style="
-                    font-family: 'Space Grotesk', sans-serif;
-                    margin-bottom: 15px;
-                "
-            >
-                Coming Soon
-            </h2>
+    </div>
 
 
-            <p
-                style="
-                    color: var(--muted);
-                    line-height: 1.8;
-                "
-            >
-                This page will eventually contain an article,
-                project, guide, infographic, calculator, or other
-                resource about budgeting.
+
+    <div class="money-flow">
+
+
+        <div class="money-card">
+
+            <div class="money-icon">
+                $
+            </div>
+
+
+            <h3>
+                Income
+            </h3>
+
+
+            <p>
+                Money coming in, such as
+                wages, an internship paycheck,
+                allowance, or other legitimate
+                sources of income.
+            </p>
+
+        </div>
+
+
+
+        <div class="money-card">
+
+            <div class="money-icon">
+                ↓
+            </div>
+
+
+            <h3>
+                Expenses
+            </h3>
+
+            <p>
+                Money going out for things
+                like transportation, food,
+                subscriptions, entertainment,
+                and other expenses.
+            </p>
+
+        </div>
+
+
+
+        <div class="money-card">
+
+            <div class="money-icon">
+                →
+            </div>
+
+
+            <h3>
+                Goals
+            </h3>
+
+            <p>
+                What you want your money to
+                help you accomplish, such as
+                saving, investing, education,
+                or future purchases.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     02 — WHY IT MATTERS
+===================================================== -->
+
+<section class="finance-section">
+
+    <div class="finance-section-header">
+
+        <span class="finance-number">
+            02 — WHY IT MATTERS
+        </span>
+
+
+        <h2>
+            Why should I care?
+        </h2>
+
+        <p>
+            A budget isn't just a spreadsheet.
+            It can help you understand your
+            habits and make decisions based
+            on your priorities.
+        </p>
+
+    </div>
+
+
+
+    <div class="benefit-grid">
+
+
+        <div class="benefit-card">
+
+            <h3>
+                Control
+            </h3>
+
+
+            <p>
+                A budget helps you understand
+                where your money is going
+                instead of letting spending
+                happen automatically.
+            </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+            <h3>
+                Goals
+            </h3>
+
+
+            <p>
+                Saving for something becomes
+                easier when you give your money
+                a specific purpose.
+            </p>
+
+        </div>
+
+
+
+        <div class="benefit-card">
+
+            <h3>
+                Preparedness
+            </h3>
+
+            <p>
+                Unexpected expenses can happen.
+                Having money set aside can make
+                them easier to handle.
+            </p>
+
+        </div>
+
+
+
+        <div class="benefit-card">
+
+            <h3>
+                Awareness
+            </h3>
+
+            <p>
+                Tracking your spending can
+                reveal habits you might not
+                notice otherwise.
             </p>
 
         </div>
     </div>
+
 </section>
+
+
+
+<!-- =====================================================
+     03 — HOW TO BUILD A BUDGET
+===================================================== -->
+
+<section class="finance-section">
+
+    <div class="finance-section-header">
+
+        <span class="finance-number">
+            03 — GET STARTED
+        </span>
+
+
+        <h2>
+            How to build a budget.
+        </h2>
+
+
+        <p>
+            You don't need a complicated
+            spreadsheet to start. Begin with
+            understanding your income,
+            expenses, and priorities.
+        </p>
+
+    </div>
+
+
+
+    <div class="budget-timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                01
+            </div>
+
+
+            <div class="timeline-content">
+
+                <h3>
+                    Know your income
+                </h3>
+
+
+                <p>
+                    Start by figuring out how much
+                    money you actually have coming
+                    in during a typical month.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Part-time work
+                    </li>
+
+                    <li>
+                        Internships
+                    </li>
+
+                    <li>
+                        Allowance
+                    </li>
+
+                    <li>
+                        Other legitimate income
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                02
+            </div>
+
+
+            <div class="timeline-content">
+
+                <h3>
+                    Track your expenses
+                </h3>
+
+
+                <p>
+                    Look at where your money is
+                    actually going. Don't guess.
+                    Use your bank statements,
+                    receipts, or a budgeting app.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Needs
+                    </li>
+
+                    <li>
+                        Wants
+                    </li>
+
+                    <li>
+                        Subscriptions
+                    </li>
+
+                    <li>
+                        Transportation
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                03
+            </div>
+
+
+            <div class="timeline-content">
+
+                <h3>
+                    Set your priorities
+                </h3>
+
+
+                <p>
+
+                    Once you understand your
+                    expenses, decide what matters
+                    most to you.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Essential expenses
+                    </li>
+
+                    <li>
+                        Savings
+                    </li>
+
+                    <li>
+                        Financial goals
+                    </li>
+
+                    <li>
+                        Discretionary spending
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                04
+            </div>
+
+
+            <div class="timeline-content">
+
+                <h3>
+                    Review and adjust
+                </h3>
+
+
+                <p>
+                    A budget doesn't have to be
+                    perfect. Review what actually
+                    happened and adjust your plan
+                    when your situation changes.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04 — EXAMPLE STUDENT BUDGET
+===================================================== -->
+
+<section class="finance-section">
+
+    <div class="finance-section-header">
+
+        <span class="finance-number">
+            04 — EXAMPLE
+        </span>
+
+
+        <h2>
+            A student budget.
+        </h2>
+
+        <p>
+            Here's an illustrative example of
+            what a monthly budget could look
+            like. Your numbers will probably
+            look completely different.
+        </p>
+
+    </div>
+
+
+
+    <div class="budget-example">
+
+
+        <div class="income-box">
+
+            <span class="income-label">
+                EXAMPLE MONTHLY INCOME
+            </span>
+
+
+            <div class="income-amount">
+                $2,000
+            </div>
+
+            <p class="income-note">
+                This is only an example for
+                understanding how money could
+                be organized. It isn't a
+                recommended budget for everyone.
+            </p>
+
+        </div>
+
+
+
+        <div class="budget-table">
+
+
+            <div class="budget-row">
+
+                <span>
+                    Needs
+                </span>
+
+                <span>
+                    $1,000
+                </span>
+
+            </div>
+
+
+            <div class="budget-row">
+
+                <span>
+                    Savings
+                </span>
+
+                <span>
+                    $400
+                </span>
+
+            </div>
+
+
+            <div class="budget-row">
+
+                <span>
+                    Transportation
+                </span>
+
+                <span>
+                    $200
+                </span>
+
+            </div>
+
+
+
+            <div class="budget-row">
+
+                <span>
+                    Wants
+                </span>
+
+                <span>
+                    $250
+                </span>
+
+            </div>
+
+
+
+            <div class="budget-row">
+
+                <span>
+                    Other
+                </span>
+
+                <span>
+                    $150
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     05 — MY PERSPECTIVE
+===================================================== -->
+
+<section class="finance-section">
+
+    <div class="finance-section-header">
+
+        <span class="finance-number">
+            05 — MY PERSPECTIVE
+        </span>
+
+        <h2>
+            My take.
+        </h2>
+
+        <p>
+            Why I believe budgeting is a skill worth
+            learning early.
+        </p>
+
+    </div>
+
+
+    <div class="my-take">
+
+        <div class="my-take-quote">
+
+            <p>
+
+                I believe students should learn
+                budgeting because it is a key
+                component to success in life.
+
+                I've started tracking my money,
+                saving, and thinking more about
+                budgeting myself, and I've realized
+                that understanding your money is
+                about more than just knowing how
+                much you have.
+
+                It's about building a foundation
+                that can support your future goals.
+
+            </p>
+
+        </div>
+
+
+        <div class="my-take-points">
+
+            <div class="take-point">
+
+                <strong>
+                    01 — Build a foundation
+                </strong>
+
+                <span>
+                    I believe everything needs a
+                    foundational system to succeed,
+                    and personal finances are no
+                    different.
+                </span>
+
+            </div>
+
+
+            <div class="take-point">
+
+                <strong>
+                    02 — Start early
+                </strong>
+
+                <span>
+                    You don't have to wait until
+                    you're an adult to start
+                    learning how to manage money.
+                </span>
+
+            </div>
+
+
+            <div class="take-point">
+
+                <strong>
+                    03 — Think beyond today
+                </strong>
+
+                <span>
+                    Budgeting isn't just about
+                    today's spending. It's about
+                    creating habits that can support
+                    future goals.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     06 — COMMON MISTAKES
+===================================================== -->
+
+<section class="finance-section">
+
+    <div class="finance-section-header">
+
+        <span class="finance-number">
+            06 — WATCH OUT FOR THESE
+        </span>
+
+
+        <h2>
+            Common mistakes.
+        </h2>
+
+    </div>
+
+
+
+    <div class="mistake-grid">
+
+
+        <div class="mistake-card">
+
+            <span class="mistake-number">
+                MISTAKE 01
+            </span>
+
+
+            <h3>
+                Ignoring small purchases
+            </h3>
+
+
+            <p>
+                Small purchases may seem
+                insignificant individually,
+                but tracking them can help
+                you understand your overall
+                spending habits.
+            </p>
+
+        </div>
+
+
+
+        <div class="mistake-card">
+
+            <span class="mistake-number">
+                MISTAKE 02
+            </span>
+
+
+            <h3>
+                Never checking your budget
+            </h3>
+
+
+            <p>
+                A budget only helps if you
+                compare your plan with what
+                you're actually spending.
+            </p>
+
+        </div>
+
+
+
+        <div class="mistake-card">
+
+            <span class="mistake-number">
+                MISTAKE 03
+            </span>
+
+
+            <h3>
+                Making an unrealistic plan
+            </h3>
+
+            <p>
+                If your budget doesn't reflect
+                your actual life, it becomes
+                difficult to maintain.
+            </p>
+
+        </div>
+
+
+
+        <div class="mistake-card">
+
+            <span class="mistake-number">
+                MISTAKE 04
+            </span>
+
+
+            <h3>
+                Forgetting irregular expenses
+            </h3>
+
+
+            <p>
+                School expenses, gifts,
+                maintenance, annual
+                subscriptions, and unexpected
+                costs can all affect your plan.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07 — RESOURCES
+===================================================== -->
+
+<section class="finance-section">
+
+    <div class="finance-section-header">
+
+        <span class="finance-number">
+            07 — EXPLORE FURTHER
+        </span>
+
+
+        <h2>
+            Learn from reliable sources.
+        </h2>
+
+
+        <p>
+
+            Financial information online can
+            vary greatly in quality. These
+            organizations provide educational
+            resources that can help you learn
+            more about managing money.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="resource-grid">
+
+
+        <a
+            href="https://www.consumerfinance.gov/consumer-tools/budgeting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    Consumer Financial
+                    Protection Bureau
+                </h3>
+
+
+                <p>
+
+                    Resources covering budgeting,
+                    saving, spending, and other
+                    personal finance topics.
+
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore CFPB ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.fdic.gov/consumer-resource-center"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    FDIC
+                </h3>
+
+
+                <p>
+                    Financial education and
+                    information about banking,
+                    saving, and managing money.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore FDIC ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.investor.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    Investor.gov
+                </h3>
+
+
+                <p>
+
+                    Educational resources that
+                    can help connect saving and
+                    budgeting with long-term
+                    investing.
+
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore Investor.gov ↗
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     END
+===================================================== -->
+
+<section
+    class="finance-section"
+    style="
+        padding-top: 20px;
+        text-align: center;
+    "
+>
+
+    <p
+        style="
+            color: var(--muted);
+            line-height: 1.8;
+        "
+    >
+
+        Financial literacy is about learning,
+        asking questions, and making informed
+        decisions. This page is for educational
+        purposes and isn't personalized financial
+        advice.
+
+    </p>
+
+</section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
     <div class="footer-inner">
 
         <div>
-
             <strong>
                 Brighton Le<span>.</span>
             </strong>
+
 
             <p>
                 Finance • Technology • Impact
@@ -157,12 +2043,11 @@
 
         </div>
 
-
         <a
-            href="../index.html"
+            href="../index.html#finance"
             class="nav-contact"
         >
-            Back Home
+            Back to Financial Literacy
         </a>
 
     </div>
