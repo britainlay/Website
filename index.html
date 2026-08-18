@@ -1557,6 +1557,10 @@
                     <img
                         src="images/Tame-1.jpg"
                         alt="All Path Engineering"
+                        class="gallery-image"
+                        data-gallery="allpath"
+                        data-title="All Path Engineering"
+                        data-description="Testing"
                     >
 
                 </div>
@@ -1567,6 +1571,10 @@
                     <img
                         src="images/Tame-2.jpeg"
                         alt="All Path competition"
+                        class="gallery-image"
+                        data-gallery="allpath"
+                        data-title="All Path Engineering"
+                        data-description="Testing"
                     >
 
                 </div>
@@ -1576,6 +1584,10 @@
                     <img
                         src="images/Tame-3.jpeg"
                         alt="All Path competition"
+                        class="gallery-image"
+                        data-gallery="allpath"
+                        data-title="All Path Engineering"
+                        data-description="Testing"
                     >
 
                 </div>
@@ -1675,7 +1687,72 @@
     </div>
 </div>
 
+<!-- =====================================================
+     PHOTO GALLERY / LIGHTBOX
+===================================================== -->
 
+<div
+    class="gallery-modal"
+    id="galleryModal"
+    aria-hidden="true"
+>
+
+    <button
+        class="gallery-close"
+        id="galleryClose"
+        aria-label="Close gallery"
+    >
+        ×
+    </button>
+
+
+    <button
+        class="gallery-nav gallery-prev"
+        id="galleryPrev"
+        aria-label="Previous photo"
+    >
+        ←
+    </button>
+
+
+    <div class="gallery-content">
+
+        <img
+            id="galleryImage"
+            src=""
+            alt=""
+        >
+
+
+        <div class="gallery-caption">
+
+            <span
+                id="galleryCounter"
+                class="gallery-counter"
+            ></span>
+
+
+            <h3
+                id="galleryTitle"
+            ></h3>
+
+            <p
+                id="galleryDescription"
+            ></p>
+
+        </div>
+    </div>
+
+
+    <button
+        class="gallery-nav gallery-next"
+        id="galleryNext"
+        aria-label="Next photo"
+    >
+        →
+    </button>
+</div>
+    
 
 <script src="script.js"></script>
 
