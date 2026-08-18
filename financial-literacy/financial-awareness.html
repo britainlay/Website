@@ -33,11 +33,1306 @@
         rel="stylesheet"
     >
 
+
+    <style>
+
+        /* =====================================================
+           FINANCIAL AWARENESS PAGE
+        ===================================================== */
+
+        .awareness-page {
+            padding-top:
+                120px;
+            padding-bottom:
+                100px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .awareness-hero {
+            max-width:
+                950px;
+            margin:
+                0 auto;
+            padding:
+                80px 20px 100px;
+            text-align:
+                center;
+        }
+
+
+        .awareness-label {
+            display:
+                block;
+            margin-bottom:
+                15px;
+            color:
+                var(--green);
+            font-family:
+                "DM Sans",
+                sans-serif;
+            font-size:
+                3.5rem;
+            font-weight:
+                700;
+            letter-spacing:
+                .14em;
+        }
+
+
+        .awareness-hero h1 {
+
+            margin:
+                0 0 28px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(3.5rem, 9vw, 7rem);
+
+            line-height:
+                .95;
+
+            letter-spacing:
+                -.06em;
+
+        }
+
+
+        .awareness-hero h1 span {
+
+            color:
+                var(--green);
+
+        }
+
+
+        .awareness-hero p {
+
+            max-width:
+                720px;
+
+            margin:
+                0 auto;
+
+            color:
+                var(--muted);
+
+            font-size:
+                clamp(1.05rem, 2vw, 1.3rem);
+
+            line-height:
+                1.75;
+
+        }
+
+
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
+
+        .awareness-section {
+
+            max-width:
+                1050px;
+
+            margin:
+                0 auto;
+
+            padding:
+                100px 25px;
+
+        }
+
+
+        .awareness-section-header {
+
+            margin-bottom:
+                45px;
+
+        }
+
+
+        .awareness-number {
+
+            display:
+                block;
+
+            margin-bottom:
+                12px;
+
+            color:
+                var(--green);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            font-size:
+                .78rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                .14em;
+
+        }
+
+
+        .awareness-section-header h2 {
+
+            margin:
+                0;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(2rem, 5vw, 3.5rem);
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -.04em;
+
+        }
+
+
+        .awareness-section-header p {
+
+            max-width:
+                750px;
+
+            margin:
+                18px 0 0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           STARTING POINT
+        ===================================================== */
+
+        .starting-point {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                25px;
+
+        }
+
+
+        .starting-card {
+
+            padding:
+                35px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                22px;
+
+            background:
+                rgba(255,255,255,.025);
+
+        }
+
+
+        .starting-card h3 {
+
+            margin:
+                0 0 15px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.5rem;
+
+        }
+
+
+        .starting-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           STUDENT PROBLEMS
+        ===================================================== */
+
+        .problem-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                18px;
+
+        }
+
+
+        .problem-card {
+
+            padding:
+                28px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+            background:
+                rgba(255,255,255,.02);
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+
+        }
+
+
+        .problem-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(82,214,156,.4);
+
+            background:
+                rgba(82,214,156,.035);
+
+        }
+
+
+        .problem-card span {
+
+            color:
+                var(--green);
+
+            font-size:
+                .72rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .problem-card h3 {
+
+            margin:
+                12px 0;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.3rem;
+
+        }
+
+
+        .problem-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           FINANCIAL SYSTEM
+        ===================================================== */
+
+        .system-box {
+
+            padding:
+                40px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(82,214,156,.08),
+                    rgba(255,255,255,.02)
+                );
+
+        }
+
+
+        .system-box h3 {
+
+            margin:
+                0 0 12px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.8rem;
+
+        }
+
+
+        .system-box > p {
+
+            max-width:
+                760px;
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                1.05rem;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .system-flow {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(6, 1fr);
+
+            gap:
+                10px;
+
+            margin-top:
+                35px;
+
+        }
+
+
+        .system-step {
+
+            padding:
+                22px 12px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            text-align:
+                center;
+
+            background:
+                rgba(0,0,0,.08);
+
+        }
+
+
+        .system-step strong {
+
+            display:
+                block;
+
+            color:
+                var(--green);
+
+            font-size:
+                .72rem;
+
+            letter-spacing:
+                .1em;
+
+        }
+
+
+        .system-step span {
+
+            display:
+                block;
+
+            margin-top:
+                8px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-weight:
+                600;
+
+        }
+
+
+        /* =====================================================
+           THINK BEFORE YOU SPEND
+        ===================================================== */
+
+        .spending-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .spending-card {
+
+            padding:
+                30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+        }
+
+
+        .spending-card h3 {
+
+            margin:
+                0 0 10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.35rem;
+
+        }
+
+
+        .spending-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.75;
+
+        }
+
+
+        .spending-highlight {
+
+            margin-top:
+                25px;
+
+            padding:
+                28px;
+
+            border-left:
+                3px solid var(--green);
+
+            border-radius:
+                0 18px 18px 0;
+
+            background:
+                rgba(255,255,255,.025);
+
+        }
+
+
+        .spending-highlight p {
+
+            margin:
+                0;
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           PROTECT YOUR MONEY
+        ===================================================== */
+
+        .protection-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .protection-card {
+
+            padding:
+                32px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+        }
+
+
+        .protection-card h3 {
+
+            margin:
+                12px 0;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.35rem;
+
+        }
+
+
+        .protection-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.75;
+
+        }
+
+
+        .protection-icon {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border:
+                1px solid rgba(82,214,156,.4);
+
+            border-radius:
+                50%;
+
+            color:
+                var(--green);
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           MY PERSPECTIVE
+        ===================================================== */
+
+        .perspective-box {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.15fr .85fr;
+
+            gap:
+                35px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .perspective-quote {
+
+            padding:
+                40px;
+
+            border-left:
+                3px solid var(--green);
+
+            border-radius:
+                0 20px 20px 0;
+
+            background:
+                rgba(255,255,255,.025);
+
+        }
+
+
+        .perspective-quote p {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(1.2rem, 2.4vw, 1.55rem);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .perspective-side {
+
+            display:
+                grid;
+
+            gap:
+                15px;
+
+        }
+
+
+        .perspective-point {
+
+            padding:
+                22px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+        }
+
+
+        .perspective-point strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        .perspective-point span {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.6;
+
+        }
+
+
+        /* =====================================================
+           FRESHMAN ADVICE
+        ===================================================== */
+
+        .advice-box {
+
+            padding:
+                45px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(82,214,156,.07),
+                    rgba(255,255,255,.02)
+                );
+
+        }
+
+
+        .advice-box h3 {
+
+            margin:
+                0 0 20px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(2rem, 4vw, 3rem);
+
+            letter-spacing:
+                -.04em;
+
+        }
+
+
+        .advice-box p {
+
+            max-width:
+                800px;
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                1.1rem;
+
+            line-height:
+                1.85;
+
+        }
+
+
+        .advice-flow {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                15px;
+
+            margin-top:
+                35px;
+
+        }
+
+
+        .advice-flow-card {
+
+            padding:
+                24px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            text-align:
+                center;
+
+        }
+
+
+        .advice-flow-card strong {
+
+            display:
+                block;
+
+            color:
+                var(--green);
+
+            font-size:
+                .75rem;
+
+            letter-spacing:
+                .1em;
+
+        }
+
+
+        .advice-flow-card span {
+
+            display:
+                block;
+
+            margin-top:
+                8px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.1rem;
+
+            font-weight:
+                600;
+
+        }
+
+
+        /* =====================================================
+           FINAL MESSAGE
+        ===================================================== */
+
+        .final-message {
+
+            max-width:
+                900px;
+
+            margin:
+                0 auto;
+
+            padding:
+                100px 25px 50px;
+
+            text-align:
+                center;
+
+        }
+
+
+        .final-message-label {
+
+            display:
+                block;
+
+            margin-bottom:
+                18px;
+
+            color:
+                var(--green);
+
+            font-size:
+                .75rem;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                .14em;
+
+        }
+
+
+        .final-message h2 {
+
+            margin:
+                0 0 25px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(2.5rem, 6vw, 4.8rem);
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -.05em;
+
+        }
+
+
+        .final-message h2 span {
+
+            color:
+                var(--green);
+
+        }
+
+
+        .final-message p {
+
+            max-width:
+                700px;
+
+            margin:
+                0 auto;
+
+            color:
+                var(--muted);
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .final-flow {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+
+            margin-top:
+                35px;
+
+        }
+
+
+        .final-flow span {
+
+            padding:
+                10px 15px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                999px;
+
+            font-size:
+                .82rem;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .final-flow b {
+
+            color:
+                var(--green);
+
+        }
+
+
+        /* =====================================================
+           RESOURCES
+        ===================================================== */
+
+        .resource-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .resource-card {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+
+            min-height:
+                220px;
+
+            padding:
+                28px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+            color:
+                inherit;
+
+            text-decoration:
+                none;
+
+            background:
+                rgba(255,255,255,.02);
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease;
+
+        }
+
+
+        .resource-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(82,214,156,.45);
+
+        }
+
+
+        .resource-card h3 {
+
+            margin:
+                0 0 10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                1.3rem;
+
+        }
+
+
+        .resource-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .resource-link {
+
+            margin-top:
+                25px;
+
+            color:
+                var(--green);
+
+            font-size:
+                .85rem;
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+        ===================================================== */
+
+        .awareness-disclaimer {
+
+            max-width:
+                750px;
+
+            margin:
+                0 auto;
+
+            padding:
+                20px 25px 80px;
+
+            color:
+                var(--muted);
+
+            text-align:
+                center;
+
+            font-size:
+                .85rem;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .problem-grid,
+            .protection-grid,
+            .resource-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .starting-point,
+            .spending-grid,
+            .perspective-box {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .system-flow {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+            }
+
+
+            .advice-flow {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .awareness-page {
+
+                padding-top:
+                    80px;
+
+            }
+
+
+            .awareness-hero {
+
+                padding:
+                    60px 20px 70px;
+
+            }
+
+
+            .awareness-section {
+
+                padding:
+                    70px 20px;
+
+            }
+
+
+            .system-flow {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .final-message {
+
+                padding:
+                    70px 20px 40px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="navbar">
 
@@ -47,99 +1342,1112 @@
             href="../index.html"
             class="logo"
         >
-            Brighton L<span>.</span>
+            BL<span>.</span>
         </a>
 
 
         <a
-            href="../index.html#finance"
+            href="compound-growth.html"
             class="nav-contact"
         >
-            ← Financial Literacy
+            ← Compound Growth
         </a>
 
     </div>
+
 </header>
 
 
 
-<main>
+<main class="awareness-page">
 
-<section class="section">
 
-    <div
-        class="section-container"
-        style="max-width: 850px;"
-    >
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        <span class="eyebrow">
-            FINANCIAL LITERACY / 05
+<section class="awareness-hero">
+
+    <span class="awareness-label">
+        FINANCIAL LITERACY / 05
+    </span>
+
+
+    <h1>
+        Financial Awareness<span>.</span>
+    </h1>
+
+
+    <p>
+        Financial literacy isn't just about
+        knowing how money works. It's about
+        understanding your choices, building
+        a system, and making informed
+        decisions.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     01 — MY STARTING POINT
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            01 — MY STARTING POINT
         </span>
 
 
-        <h1
-            style="
-                font-family: 'Space Grotesk', sans-serif;
-                font-size: clamp(3rem, 7vw, 5rem);
-                line-height: 1;
-                letter-spacing: -.05em;
-                margin-bottom: 25px;
-            "
-        >
-            Financial Awareness
-        </h1>
+        <h2>
+            I knew I should save.
+            I didn't know much beyond that.
+        </h2>
+
+    </div>
 
 
-        <p
-            style="
-                color: var(--muted);
-                font-size: 1.15rem;
-                max-width: 700px;
-            "
-        >
-            A future financial literacy project by Brighton Le.
-            Content coming soon.
-        </p>
+    <div class="starting-point">
 
 
-        <div
-            style="
-                margin-top: 60px;
-                padding: 30px;
-                border: 1px solid var(--border);
-                border-radius: 18px;
-                background: rgba(255,255,255,.025);
-            "
-        >
+        <div class="starting-card">
 
-            <h2
-                style="
-                    font-family: 'Space Grotesk', sans-serif;
-                    margin-bottom: 15px;
-                "
-            >
-                Coming Soon
-            </h2>
+            <h3>
+                Where I started
+            </h3>
 
 
-            <p
-                style="
-                    color: var(--muted);
-                    line-height: 1.8;
-                "
-            >
-                This page will eventually contain an article,
-                project, guide, infographic, calculator, or other
-                resource about budgeting.
+            <p>
+                When I first started thinking
+                about personal finance, I wasn't
+                very financially aware.
+
+                I knew that saving money was
+                important, but I didn't fully
+                understand everything that went
+                into managing money effectively.
             </p>
 
         </div>
+
+
+        <div class="starting-card">
+
+            <h3>
+                Where I am now
+            </h3>
+
+
+            <p>
+                Learning about budgeting, credit,
+                investing, and compound growth
+                has helped me understand how
+                different parts of personal
+                finance connect with each other.
+            </p>
+
+        </div>
+
+
     </div>
+
 </section>
+
+
+
+<!-- =====================================================
+     02 — STUDENT FINANCIAL CHALLENGES
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            02 — STUDENT FINANCE
+        </span>
+
+
+        <h2>
+            Financial decisions start
+            earlier than we think.
+        </h2>
+
+
+        <p>
+            I think students face many of the
+            same financial misunderstandings
+            that adults do, but often without
+            having enough opportunities to learn
+            about them beforehand.
+        </p>
+
+    </div>
+
+
+    <div class="problem-grid">
+
+
+        <div class="problem-card">
+
+            <span>
+                01
+            </span>
+
+
+            <h3>
+                Not tracking spending
+            </h3>
+
+
+            <p>
+                Knowing how much money you have
+                isn't the same as knowing where
+                it's going.
+            </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+            <span>
+                02
+            </span>
+
+
+            <h3>
+                Misunderstanding credit
+            </h3>
+
+
+            <p>
+                Credit isn't free money.
+                Understanding how borrowing
+                works matters.
+            </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+            <span>
+                03
+            </span>
+
+
+            <h3>
+                Investing misconceptions
+            </h3>
+
+
+            <p>
+                Investing can seem intimidating
+                when you don't understand the
+                basics.
+            </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+            <span>
+                04
+            </span>
+
+
+            <h3>
+                Wanting things immediately
+            </h3>
+
+
+            <p>
+                Understanding needs, wants,
+                and opportunity costs can
+                change spending decisions.
+            </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+            <span>
+                05
+            </span>
+
+
+            <h3>
+                Not understanding interest
+            </h3>
+
+
+            <p>
+                Interest can work for you or
+                against you depending on the
+                situation.
+            </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+            <span>
+                06
+            </span>
+
+
+            <h3>
+                Limited financial education
+            </h3>
+
+
+            <p>
+                Students deserve opportunities
+                to learn practical financial
+                skills before entering adulthood.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     03 — BUILD A SYSTEM
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            03 — BUILD A SYSTEM
+        </span>
+
+
+        <h2>
+            A financial foundation
+            starts with a system.
+        </h2>
+
+    </div>
+
+
+    <div class="system-box">
+
+        <h3>
+            Give your money a direction.
+        </h3>
+
+
+        <p>
+            One of the biggest things I've
+            learned is that having a system can
+            make it easier to understand where
+            your money is going and how your
+            decisions connect to your goals.
+        </p>
+
+
+        <div class="system-flow">
+
+
+            <div class="system-step">
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    Track
+                </span>
+
+            </div>
+
+
+            <div class="system-step">
+
+                <strong>
+                    02
+                </strong>
+
+                <span>
+                    Budget
+                </span>
+
+            </div>
+
+
+            <div class="system-step">
+
+                <strong>
+                    03
+                </strong>
+
+                <span>
+                    Save
+                </span>
+
+            </div>
+
+
+            <div class="system-step">
+
+                <strong>
+                    04
+                </strong>
+
+                <span>
+                    Credit
+                </span>
+
+            </div>
+
+
+            <div class="system-step">
+
+                <strong>
+                    05
+                </strong>
+
+                <span>
+                    Invest
+                </span>
+
+            </div>
+
+
+            <div class="system-step">
+
+                <strong>
+                    06
+                </strong>
+
+                <span>
+                    Adapt
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04 — THINK BEFORE YOU SPEND
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            04 — SPENDING
+        </span>
+
+
+        <h2>
+            Think before you spend.
+        </h2>
+
+
+        <p>
+            Spending isn't automatically bad.
+            The important part is understanding
+            whether a purchase fits into the
+            financial system you've created.
+        </p>
+
+    </div>
+
+
+    <div class="spending-grid">
+
+
+        <div class="spending-card">
+
+            <h3>
+                Can I afford it?
+            </h3>
+
+
+            <p>
+                Does my budget actually have
+                room for this purchase without
+                interfering with my other goals?
+            </p>
+
+        </div>
+
+
+        <div class="spending-card">
+
+            <h3>
+                Do I actually need it?
+            </h3>
+
+
+            <p>
+                Is this something I need, or is
+                it something I simply want right
+                now?
+            </p>
+
+        </div>
+
+
+        <div class="spending-card">
+
+            <h3>
+                Does it affect my goals?
+            </h3>
+
+
+            <p>
+                Could this purchase make it
+                harder to reach something I'm
+                saving or planning for?
+            </p>
+
+        </div>
+
+
+        <div class="spending-card">
+
+            <h3>
+                Can I spend it guilt-free?
+            </h3>
+
+
+            <p>
+                If your budget gives you room
+                for something you enjoy, spending
+                money doesn't have to feel wrong.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="spending-highlight">
+
+        <p>
+            <strong>
+                Guilt-free spending can still be
+                part of a good budget.
+            </strong>
+
+            A budget should help you control
+            your money, not make you afraid to
+            use it.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05 — PROTECT YOUR MONEY
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            05 — PROTECT YOUR MONEY
+        </span>
+
+
+        <h2>
+            Not everything online
+            deserves your trust.
+        </h2>
+
+
+        <p>
+            Financial awareness also means
+            knowing when something doesn't
+            seem right and taking time to
+            investigate before making a
+            decision.
+        </p>
+
+    </div>
+
+
+    <div class="protection-grid">
+
+
+        <div class="protection-card">
+
+            <div class="protection-icon">
+                01
+            </div>
+
+
+            <h3>
+                Personal information
+            </h3>
+
+
+            <p>
+                Be careful when someone asks
+                for sensitive personal or
+                financial information,
+                especially unexpectedly.
+            </p>
+
+        </div>
+
+
+        <div class="protection-card">
+
+            <div class="protection-icon">
+                02
+            </div>
+
+
+            <h3>
+                Too good to be true
+            </h3>
+
+
+            <p>
+                Promises that seem unrealistic
+                should make you stop and
+                question the opportunity
+                before acting.
+            </p>
+
+        </div>
+
+
+        <div class="protection-card">
+
+            <div class="protection-icon">
+                03
+            </div>
+
+
+            <h3>
+                False statements
+            </h3>
+
+
+            <p>
+                Don't assume something is
+                legitimate simply because
+                someone makes confident claims
+                about it.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="spending-highlight">
+
+        <p>
+            I've come across suspicious financial
+            opportunities before. What made them
+            stand out to me were requests for
+            personal information, claims that
+            seemed too good to be true, and
+            statements that didn't seem legitimate.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06 — MY PERSPECTIVE
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            06 — MY PERSPECTIVE
+        </span>
+
+
+        <h2>
+            Make more money.
+            Manage it better.
+        </h2>
+
+    </div>
+
+
+    <div class="perspective-box">
+
+
+        <div class="perspective-quote">
+
+            <p>
+                I believe both making money and
+                learning how to manage it are
+                important.
+
+                But being able to manage the
+                money you're making is key.
+            </p>
+
+        </div>
+
+
+        <div class="perspective-side">
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    Understand your money
+                </strong>
+
+                <span>
+                    Know where your money is
+                    going and what resources
+                    you have available.
+                </span>
+
+            </div>
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    Use your resources
+                </strong>
+
+                <span>
+                    Think about how your
+                    resources can help you
+                    reach your goals.
+                </span>
+
+            </div>
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    Build toward your goals
+                </strong>
+
+                <span>
+                    Financial awareness can
+                    help connect today's
+                    decisions with future goals.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="spending-highlight">
+
+        <p>
+            Becoming more financially aware has
+            helped me understand where my money
+            is going, how I can better utilize my
+            resources, and how those decisions
+            can help me reach my goals.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07 — ADVICE TO MY FRESHMAN SELF
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            07 — LOOKING BACK
+        </span>
+
+
+        <h2>
+            What I would tell my
+            freshman-year self.
+        </h2>
+
+    </div>
+
+
+    <div class="advice-box">
+
+        <h3>
+            Stay consistent. Adapt when necessary.
+        </h3>
+
+
+        <p>
+            I would tell my freshman-year self
+            to be consistent and go with the
+            original plan.
+
+            If it doesn't work, adjust it and
+            continue forward.
+
+            Rinse and repeat.
+
+            I've learned that adapting and
+            improving isn't just useful for
+            finances. It can apply to almost
+            everything in life.
+        </p>
+
+
+        <div class="advice-flow">
+
+
+            <div class="advice-flow-card">
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    Stay Consistent
+                </span>
+
+            </div>
+
+
+            <div class="advice-flow-card">
+
+                <strong>
+                    02
+                </strong>
+
+                <span>
+                    Adapt
+                </span>
+
+            </div>
+
+
+            <div class="advice-flow-card">
+
+                <strong>
+                    03
+                </strong>
+
+                <span>
+                    Improve
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     08 — START YOUR FOUNDATION
+===================================================== -->
+
+<section class="final-message">
+
+    <span class="final-message-label">
+        08 — YOUR TURN
+    </span>
+
+
+    <h2>
+        It's never too late
+        to start<span>.</span>
+    </h2>
+
+
+    <p>
+        I want other students to realize
+        that it's never too late to start
+        learning and applying financial
+        literacy.
+
+        You don't need to know everything
+        at the beginning.
+
+        Start with the basics, build a system,
+        learn from your mistakes, adjust when
+        necessary, and keep moving forward.
+    </p>
+
+
+    <div class="final-flow">
+
+        <span>
+            Learn
+        </span>
+
+        <b>
+            →
+        </b>
+
+        <span>
+            Build
+        </span>
+
+        <b>
+            →
+        </b>
+
+        <span>
+            Apply
+        </span>
+
+        <b>
+            →
+        </b>
+
+        <span>
+            Adapt
+        </span>
+
+        <b>
+            →
+        </b>
+
+        <span>
+            Grow
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     09 — RESOURCES
+===================================================== -->
+
+<section class="awareness-section">
+
+    <div class="awareness-section-header">
+
+        <span class="awareness-number">
+            09 — EXPLORE FURTHER
+        </span>
+
+
+        <h2>
+            Keep learning.
+        </h2>
+
+
+        <p>
+            Financial literacy is something
+            that continues beyond high school.
+            These resources can help you keep
+            building your foundation.
+        </p>
+
+    </div>
+
+
+    <div class="resource-grid">
+
+
+        <a
+            href="https://www.consumerfinance.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    Consumer Financial
+                    Protection Bureau
+                </h3>
+
+
+                <p>
+                    Educational resources about
+                    financial products, money
+                    management, credit, and
+                    consumer protection.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore CFPB ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.investor.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    Investor.gov
+                </h3>
+
+
+                <p>
+                    Educational information
+                    about investing, saving,
+                    fraud awareness, and
+                    financial markets.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore Investor.gov ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.fdic.gov/consumer-resource-center"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    FDIC Consumer Resources
+                </h3>
+
+
+                <p>
+                    Resources covering banking,
+                    saving, deposit insurance,
+                    and financial education.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore FDIC ↗
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL DISCLAIMER
+===================================================== -->
+
+<div class="awareness-disclaimer">
+
+    This page is intended for educational
+    purposes only and does not provide
+    personalized financial advice.
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE NAVIGATION
+===================================================== -->
+
+<section class="finance-navigation">
+
+
+    <a
+        href="compound-growth.html"
+        class="finance-nav-card previous"
+    >
+
+        <span>
+            ← PREVIOUS
+        </span>
+
+
+        <strong>
+            Compound Growth
+        </strong>
+
+
+        <p>
+            See how time can work in your favor.
+        </p>
+
+    </a>
+
+</section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -151,6 +2459,7 @@
                 Brighton Le<span>.</span>
             </strong>
 
+
             <p>
                 Finance • Technology • Impact
             </p>
@@ -159,10 +2468,10 @@
 
 
         <a
-            href="../index.html"
+            href="../index.html#finance"
             class="nav-contact"
         >
-            Back Home
+            Back to Financial Literacy
         </a>
 
     </div>
