@@ -24,7 +24,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.gstatic.com"
+        href="https://fonts.googleapis.com"
         crossorigin
     >
 
@@ -33,11 +33,604 @@
         rel="stylesheet"
     >
 
+
+    <style>
+
+        /* =====================================================
+           COMPOUND GROWTH PAGE
+        ===================================================== */
+
+        .compound-page {
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .compound-hero {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 80px 20px 100px;
+            text-align: center;
+        }
+
+
+        .compound-label {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--green);
+            font-family: "DM Sans", sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+        }
+
+
+        .compound-hero h1 {
+            margin: 0 0 28px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            line-height: .95;
+            letter-spacing: -.06em;
+        }
+
+
+        .compound-hero h1 span {
+            color: var(--green);
+        }
+
+
+        .compound-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
+
+        .compound-section {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 100px 25px;
+        }
+
+
+        .compound-section-header {
+            margin-bottom: 45px;
+        }
+
+
+        .compound-number {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--green);
+            font-family: "DM Sans", sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: .14em;
+        }
+
+
+        .compound-section-header h2 {
+            margin: 0;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+        }
+
+
+        .compound-section-header p {
+            max-width: 720px;
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-size: 1.08rem;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           BASICS
+        ===================================================== */
+
+        .basics-card {
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: rgba(255,255,255,.025);
+        }
+
+
+        .basics-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.08rem;
+            line-height: 1.9;
+        }
+
+
+        .formula {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 16px;
+            background: rgba(82,214,156,.06);
+            text-align: center;
+        }
+
+
+        .formula strong {
+            display: block;
+            color: var(--green);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.8rem;
+        }
+
+
+        .formula span {
+            display: block;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+
+        /* =====================================================
+           TIME
+        ===================================================== */
+
+        .time-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+
+        .time-card {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: rgba(255,255,255,.025);
+        }
+
+
+        .time-card strong {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--green);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.5rem;
+        }
+
+
+        .time-card h3 {
+            margin: 0 0 10px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.3rem;
+        }
+
+
+        .time-card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           CALCULATOR
+        ===================================================== */
+
+        .calculator {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 25px;
+        }
+
+
+        .calculator-inputs,
+        .calculator-result {
+            padding: 35px;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: rgba(255,255,255,.025);
+        }
+
+
+        .calculator-inputs h3,
+        .calculator-result h3 {
+            margin: 0 0 25px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.5rem;
+        }
+
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: .9rem;
+            font-weight: 600;
+        }
+
+
+        .input-group input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 15px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            outline: none;
+            background: rgba(255,255,255,.04);
+            color: inherit;
+            font: inherit;
+        }
+
+
+        .input-group input:focus {
+            border-color: var(--green);
+        }
+
+
+        .calculate-button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 14px 20px;
+            border: 0;
+            border-radius: 12px;
+            background: var(--green);
+            color: #07110d;
+            font-weight: 700;
+            font-size: .95rem;
+            cursor: pointer;
+            transition: transform .2s ease;
+        }
+
+
+        .calculate-button:hover {
+            transform: translateY(-2px);
+        }
+
+
+        .result-label {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+
+        .result-number {
+            margin: 12px 0 20px;
+            color: var(--green);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1;
+            letter-spacing: -.05em;
+        }
+
+
+        .result-explanation {
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+
+        .calculator-note {
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           TIMELINE
+        ===================================================== */
+
+        .growth-timeline {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+
+        .growth-timeline::before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: var(--border);
+        }
+
+
+        .growth-point {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+
+        .growth-dot {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border: 1px solid var(--green);
+            border-radius: 50%;
+            background: var(--bg);
+            color: var(--green);
+            font-weight: 700;
+        }
+
+
+        .growth-point strong {
+            display: block;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+
+        .growth-point span {
+            display: block;
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: .85rem;
+        }
+
+
+        /* =====================================================
+           PERSONAL PERSPECTIVE
+        ===================================================== */
+
+        .perspective-box {
+            padding: 45px;
+            border-left: 3px solid var(--green);
+            border-radius: 0 22px 22px 0;
+            background: rgba(255,255,255,.025);
+        }
+
+
+        .perspective-box p {
+            margin: 0;
+            font-size: clamp(1.15rem, 2.3vw, 1.5rem);
+            line-height: 1.75;
+        }
+
+
+        .perspective-highlight {
+            margin-top: 25px;
+            color: var(--green);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           WHAT CAN GET IN THE WAY
+        ===================================================== */
+
+        .obstacle-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+
+        .obstacle-card {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+        }
+
+
+        .obstacle-card h3 {
+            margin: 0 0 10px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.3rem;
+        }
+
+
+        .obstacle-card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           RESOURCES
+        ===================================================== */
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 210px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: inherit;
+            text-decoration: none;
+            background: rgba(255,255,255,.02);
+            transition:
+                transform .25s ease,
+                border-color .25s ease;
+        }
+
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(82,214,156,.45);
+        }
+
+
+        .resource-card h3 {
+            margin: 0 0 10px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.3rem;
+        }
+
+
+        .resource-card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+
+        .resource-link {
+            margin-top: 25px;
+            color: var(--green);
+            font-size: .85rem;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+        ===================================================== */
+
+        .compound-disclaimer {
+            max-width: 750px;
+            margin: 0 auto;
+            color: var(--muted);
+            text-align: center;
+            font-size: .85rem;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           PAGE NAVIGATION
+        ===================================================== */
+
+        .finance-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 30px 25px 0;
+        }
+
+
+        .finance-navigation a {
+            padding: 14px 20px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+            transition:
+                border-color .2s ease,
+                transform .2s ease;
+        }
+
+
+        .finance-navigation a:hover {
+            transform: translateY(-2px);
+            border-color: rgba(82,214,156,.45);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .time-grid,
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator {
+                grid-template-columns: 1fr;
+            }
+
+            .growth-timeline {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .growth-timeline::before {
+                display: none;
+            }
+
+            .obstacle-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .compound-page {
+                padding-top: 80px;
+            }
+
+            .compound-hero {
+                padding: 60px 20px 70px;
+            }
+
+            .compound-section {
+                padding: 70px 20px;
+            }
+
+            .basics-card,
+            .calculator-inputs,
+            .calculator-result,
+            .perspective-box {
+                padding: 28px;
+            }
+
+            .finance-navigation {
+                flex-direction: column;
+            }
+
+            .finance-navigation a {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="navbar">
 
@@ -59,87 +652,859 @@
         </a>
 
     </div>
+
 </header>
 
 
 
-<main>
+<main class="compound-page">
 
-<section class="section">
 
-    <div
-        class="section-container"
-        style="max-width: 850px;"
-    >
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        <span class="eyebrow">
-            FINANCIAL LITERACY / 04
+<section class="compound-hero">
+
+    <span class="compound-label">
+        FINANCIAL LITERACY / 04
+    </span>
+
+
+    <h1>
+        Compound Growth<span>.</span>
+    </h1>
+
+
+    <p>
+        Understanding how time, consistency,
+        and growth can work together over
+        the long term.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     01 — THE BASICS
+===================================================== -->
+
+<section class="compound-section">
+
+    <div class="compound-section-header">
+
+        <span class="compound-number">
+            01 — THE BASICS
         </span>
 
 
-        <h1
-            style="
-                font-family: 'Space Grotesk', sans-serif;
-                font-size: clamp(3rem, 7vw, 5rem);
-                line-height: 1;
-                letter-spacing: -.05em;
-                margin-bottom: 25px;
-            "
-        >
-            Compound Growth
-        </h1>
+        <h2>
+            What is compound growth?
+        </h2>
 
 
-        <p
-            style="
-                color: var(--muted);
-                font-size: 1.15rem;
-                max-width: 700px;
-            "
-        >
-            A future financial literacy project by Brighton Le.
-            Content coming soon.
+        <p>
+            Compound growth describes a process
+            where growth can build on previous
+            growth over time.
+        </p>
+
+    </div>
+
+
+    <div class="basics-card">
+
+        <p>
+            A simple way to think about it is that
+            your money can potentially grow, and
+            then future growth can build on what
+            came before it.
+
+            The longer the time period, the more
+            opportunities there may be for this
+            process to continue.
         </p>
 
 
-        <div
-            style="
-                margin-top: 60px;
-                padding: 30px;
-                border: 1px solid var(--border);
-                border-radius: 18px;
-                background: rgba(255,255,255,.025);
-            "
-        >
+        <div class="formula">
 
-            <h2
-                style="
-                    font-family: 'Space Grotesk', sans-serif;
-                    margin-bottom: 15px;
-                "
-            >
-                Coming Soon
-            </h2>
+            <strong>
+                Growth + Time = Potential
+            </strong>
 
 
-            <p
-                style="
-                    color: var(--muted);
-                    line-height: 1.8;
-                "
-            >
-                This page will eventually contain an article,
-                project, guide, infographic, calculator, or other
-                resource about budgeting.
+            <span>
+                The longer the period, the more
+                compounding can potentially matter.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     02 — THE POWER OF TIME
+===================================================== -->
+
+<section class="compound-section">
+
+    <div class="compound-section-header">
+
+        <span class="compound-number">
+            02 — THE POWER OF TIME
+        </span>
+
+
+        <h2>
+            Time can be your advantage.
+        </h2>
+
+
+        <p>
+            Compound growth becomes especially
+            interesting when you look at longer
+            periods of time.
+        </p>
+
+    </div>
+
+
+    <div class="time-grid">
+
+
+        <div class="time-card">
+
+            <strong>
+                Start
+            </strong>
+
+
+            <h3>
+                Give yourself time
+            </h3>
+
+
+            <p>
+                Starting earlier gives your money
+                more time to potentially experience
+                compounding.
             </p>
 
         </div>
+
+
+
+        <div class="time-card">
+
+            <strong>
+                Continue
+            </strong>
+
+
+            <h3>
+                Stay consistent
+            </h3>
+
+
+            <p>
+                Consistent saving or investing can
+                give growth more opportunities to
+                build over time.
+            </p>
+
+        </div>
+
+
+
+        <div class="time-card">
+
+            <strong>
+                Long-term
+            </strong>
+
+
+            <h3>
+                Let time work
+            </h3>
+
+
+            <p>
+                The long-term picture can look very
+                different from the short-term
+                picture.
+            </p>
+
+        </div>
+
+
     </div>
+
 </section>
+
+
+
+<!-- =====================================================
+     03 — CALCULATOR
+===================================================== -->
+
+<section class="compound-section">
+
+    <div class="compound-section-header">
+
+        <span class="compound-number">
+            03 — SEE IT IN ACTION
+        </span>
+
+
+        <h2>
+            Watch hypothetical growth.
+        </h2>
+
+
+        <p>
+            Try changing the numbers below to see
+            how time and contributions can affect
+            a hypothetical future value.
+        </p>
+
+    </div>
+
+
+    <div class="calculator">
+
+
+        <div class="calculator-inputs">
+
+            <h3>
+                Your example
+            </h3>
+
+
+            <div class="input-group">
+
+                <label for="startingAmount">
+                    Starting amount ($)
+                </label>
+
+
+                <input
+                    type="number"
+                    id="startingAmount"
+                    value="100"
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="monthlyContribution">
+                    Monthly contribution ($)
+                </label>
+
+
+                <input
+                    type="number"
+                    id="monthlyContribution"
+                    value="25"
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="years">
+                    Years
+                </label>
+
+
+                <input
+                    type="number"
+                    id="years"
+                    value="10"
+                    min="1"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="rate">
+                    Hypothetical annual growth (%)
+                </label>
+
+
+                <input
+                    type="number"
+                    id="rate"
+                    value="7"
+                    min="0"
+                    step=".1"
+                >
+
+            </div>
+
+
+            <button
+                class="calculate-button"
+                onclick="calculateGrowth()"
+            >
+                Calculate Example
+            </button>
+
+        </div>
+
+
+
+        <div class="calculator-result">
+
+            <h3>
+                Hypothetical result
+            </h3>
+
+
+            <span class="result-label">
+                Estimated future value
+            </span>
+
+
+            <div
+                class="result-number"
+                id="result"
+            >
+                $0
+            </div>
+
+
+            <p
+                class="result-explanation"
+                id="resultText"
+            >
+                Enter your numbers and calculate
+                a hypothetical example.
+            </p>
+
+
+            <p class="calculator-note">
+
+                This calculator is for educational
+                purposes only. The growth rate is
+                hypothetical and actual investment
+                returns are not guaranteed.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04 — COMPOUNDING OVER TIME
+===================================================== -->
+
+<section class="compound-section">
+
+    <div class="compound-section-header">
+
+        <span class="compound-number">
+            04 — OVER TIME
+        </span>
+
+
+        <h2>
+            Small beginnings can have a long runway.
+        </h2>
+
+
+        <p>
+            The point isn't that a particular amount
+            of money will become a guaranteed
+            amount in the future.
+
+            The point is understanding what time
+            can potentially do.
+        </p>
+
+    </div>
+
+
+    <div class="growth-timeline">
+
+
+        <div class="growth-point">
+
+            <div class="growth-dot">
+                1
+            </div>
+
+
+            <strong>
+                Start
+            </strong>
+
+
+            <span>
+                Begin learning
+            </span>
+
+        </div>
+
+
+
+        <div class="growth-point">
+
+            <div class="growth-dot">
+                5
+            </div>
+
+
+            <strong>
+                Build
+            </strong>
+
+
+            <span>
+                Develop habits
+            </span>
+
+        </div>
+
+
+
+        <div class="growth-point">
+
+            <div class="growth-dot">
+                10
+            </div>
+
+
+            <strong>
+                Continue
+            </strong>
+
+
+            <span>
+                Stay consistent
+            </span>
+
+        </div>
+
+
+
+        <div class="growth-point">
+
+            <div class="growth-dot">
+                20
+            </div>
+
+
+            <strong>
+                Grow
+            </strong>
+
+
+            <span>
+                More time passes
+            </span>
+
+        </div>
+
+
+
+        <div class="growth-point">
+
+            <div class="growth-dot">
+                30+
+            </div>
+
+
+            <strong>
+                Long-term
+            </strong>
+
+
+            <span>
+                Compounding matters
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05 — MY PERSPECTIVE
+===================================================== -->
+
+<section class="compound-section">
+
+    <div class="compound-section-header">
+
+        <span class="compound-number">
+            05 — MY PERSPECTIVE
+        </span>
+
+
+        <h2>
+            What compound growth taught me.
+        </h2>
+
+    </div>
+
+
+    <div class="perspective-box">
+
+        <p>
+            I first learned about compound growth
+            through investing.
+
+            I was honestly appalled by how much
+            compounding can potentially do over
+            time and how different the numbers can
+            become when you look at a longer period.
+
+            Seeing hypothetical numbers grow made
+            the concept feel much more real to me.
+            It showed me why starting early can give
+            you an advantage.
+        </p>
+
+
+        <div class="perspective-highlight">
+            Start as soon as possible.
+        </div>
+
+
+        <p style="margin-top: 20px;">
+
+            To me, compound growth is all about the
+            long-term. It's not about trying to
+            become wealthy overnight.
+
+            It's about understanding how time and
+            consistent financial decisions can
+            potentially make a difference.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06 — WHAT CAN GET IN THE WAY
+===================================================== -->
+
+<section class="compound-section">
+
+    <div class="compound-section-header">
+
+        <span class="compound-number">
+            06 — KEEP IT REAL
+        </span>
+
+
+        <h2>
+            Compounding isn't magic.
+        </h2>
+
+
+        <p>
+            Compound growth can be powerful, but
+            there are also things that can work
+            against long-term growth.
+        </p>
+
+    </div>
+
+
+    <div class="obstacle-grid">
+
+
+        <div class="obstacle-card">
+
+            <h3>
+                Waiting too long
+            </h3>
+
+
+            <p>
+                Starting later can mean having less
+                time for potential growth to build.
+            </p>
+
+        </div>
+
+
+
+        <div class="obstacle-card">
+
+            <h3>
+                Inconsistency
+            </h3>
+
+
+            <p>
+                Building financial habits often
+                requires consistency rather than
+                relying on one-time decisions.
+            </p>
+
+        </div>
+
+
+
+        <div class="obstacle-card">
+
+            <h3>
+                Fees and costs
+            </h3>
+
+
+            <p>
+                Fees and other costs can reduce the
+                amount of money that remains invested
+                and available for potential growth.
+            </p>
+
+        </div>
+
+
+
+        <div class="obstacle-card">
+
+            <h3>
+                Expecting guarantees
+            </h3>
+
+
+            <p>
+                Investment returns are not guaranteed.
+                Markets can rise and fall, so
+                hypothetical examples should never
+                be treated as promises.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07 — EXPLORE FURTHER
+===================================================== -->
+
+<section class="compound-section">
+
+    <div class="compound-section-header">
+
+        <span class="compound-number">
+            07 — EXPLORE FURTHER
+        </span>
+
+
+        <h2>
+            Keep learning.
+        </h2>
+
+
+        <p>
+            Compound growth becomes much easier
+            to understand when you experiment with
+            different time periods and amounts.
+        </p>
+
+    </div>
+
+
+    <div class="resource-grid">
+
+
+        <a
+            href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    Investor.gov
+                </h3>
+
+
+                <p>
+                    Explore the SEC's compound
+                    interest calculator and other
+                    investor education resources.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore Investor.gov ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.finra.org/investors/tools-calculators"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    FINRA
+                </h3>
+
+
+                <p>
+                    Find investor education tools
+                    and calculators to continue
+                    learning about financial topics.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore FINRA ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.investor.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    Learn More
+                </h3>
+
+
+                <p>
+                    Continue building your financial
+                    knowledge through reliable
+                    investor education resources.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Visit Investor.gov ↗
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISCLAIMER
+===================================================== -->
+
+<section
+    class="compound-section"
+    style="
+        padding-top: 20px;
+    "
+>
+
+    <p class="compound-disclaimer">
+
+        This page is intended for educational
+        purposes only. Hypothetical examples are
+        not guarantees of future investment
+        performance and do not constitute
+        personalized financial or investment
+        advice.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE NAVIGATION
+===================================================== -->
+
+<nav class="finance-navigation">
+
+
+    <a
+        href="credit.html"
+    >
+        ← Credit
+    </a>
+
+
+    <a
+        href="../index.html#finance"
+    >
+        Financial Literacy
+    </a>
+
+
+    <a
+        href="index.html"
+    >
+        Financial Literacy →
+    </a>
+
+
+</nav>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -151,6 +1516,7 @@
                 Brighton Le<span>.</span>
             </strong>
 
+
             <p>
                 Finance • Technology • Impact
             </p>
@@ -159,15 +1525,147 @@
 
 
         <a
-            href="../index.html"
+            href="../index.html#finance"
             class="nav-contact"
         >
-            Back Home
+            Back to Financial Literacy
         </a>
 
     </div>
 
 </footer>
+
+
+
+<!-- =====================================================
+     CALCULATOR SCRIPT
+===================================================== -->
+
+<script>
+
+    function calculateGrowth() {
+
+        const startingAmount =
+            Number(
+                document.getElementById(
+                    "startingAmount"
+                ).value
+            );
+
+
+        const monthlyContribution =
+            Number(
+                document.getElementById(
+                    "monthlyContribution"
+                ).value
+            );
+
+
+        const years =
+            Number(
+                document.getElementById(
+                    "years"
+                ).value
+            );
+
+
+        const annualRate =
+            Number(
+                document.getElementById(
+                    "rate"
+                ).value
+            );
+
+
+        const monthlyRate =
+            annualRate / 100 / 12;
+
+
+        const months =
+            years * 12;
+
+
+        const futureStartingAmount =
+            startingAmount *
+            Math.pow(
+                1 + monthlyRate,
+                months
+            );
+
+
+        const futureContributions =
+            monthlyRate === 0
+                ? monthlyContribution * months
+                : monthlyContribution *
+                  (
+                      (Math.pow(
+                          1 + monthlyRate,
+                          months
+                      ) - 1)
+                      / monthlyRate
+                  );
+
+
+        const futureValue =
+            futureStartingAmount +
+            futureContributions;
+
+
+        const totalContributed =
+            startingAmount +
+            (
+                monthlyContribution *
+                months
+            );
+
+
+        document.getElementById(
+            "result"
+        ).textContent =
+            futureValue.toLocaleString(
+                "en-US",
+                {
+                    style: "currency",
+                    currency: "USD",
+                    maximumFractionDigits: 0
+                }
+            );
+
+
+        document.getElementById(
+            "resultText"
+        ).textContent =
+            "You would contribute approximately " +
+            totalContributed.toLocaleString(
+                "en-US",
+                {
+                    style: "currency",
+                    currency: "USD",
+                    maximumFractionDigits: 0
+                }
+            ) +
+            " over " +
+            years +
+            " years. At the hypothetical " +
+            annualRate +
+            "% annual growth rate, the example " +
+            "could reach approximately " +
+            futureValue.toLocaleString(
+                "en-US",
+                {
+                    style: "currency",
+                    currency: "USD",
+                    maximumFractionDigits: 0
+                }
+            ) +
+            ".";
+
+    }
+
+
+    calculateGrowth();
+
+</script>
 
 
 </body>
