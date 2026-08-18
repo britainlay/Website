@@ -194,7 +194,6 @@
         ===================================================== */
 
         .concept-grid {
-
             display:
                 grid;
             grid-template-columns:
@@ -1022,6 +1021,120 @@
                 700;
         }
 
+        /* =====================================================
+   FINANCIAL LITERACY PAGE NAVIGATION
+===================================================== */
+
+        .finance-navigation {
+            max-width:
+        1050px;
+            margin:
+                0 auto;
+            padding:
+                40px 25px 100px;
+            display:
+                grid;
+            grid-template-columns:
+                1fr 1fr;
+            gap:
+                20px;
+        }
+
+
+        .finance-nav-card {
+            display:
+                flex;
+            flex-direction:
+                column;
+            justify-content:
+                center;
+            min-height:
+                170px;
+            padding:
+                30px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                22px;
+            color:
+                inherit;
+            text-decoration:
+                none;
+            background:
+                rgba(255,255,255,.025);
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+        }
+
+
+        .finance-nav-card:hover {
+            transform:
+                translateY(-5px);
+            border-color:
+                rgba(82,214,156,.45);
+            background:
+                rgba(82,214,156,.035);
+        }
+
+
+        .finance-nav-card.next {
+            text-align:
+                right;
+        }
+
+
+        .finance-nav-card span {
+            margin-bottom:
+                10px;
+            color:
+                var(--green);
+            font-size:
+                .75rem;
+            font-weight:
+                700;
+            letter-spacing:
+                .12em;
+        }
+
+
+        .finance-nav-card strong {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.7rem;
+        }
+
+
+        .finance-nav-card p {
+            margin:
+                8px 0 0;
+            color:
+                var(--muted);
+            font-size:
+                1rem;
+            line-height:
+                1.6;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .finance-navigation {
+                grid-template-columns:
+                    1fr;
+                padding:
+                    20px 20px 70px;
+            }
+
+
+        .finance-nav-card.next {
+                text-align:
+                    left;
+            }
+        }
 
         /* =====================================================
            RESPONSIVE
@@ -1100,6 +1213,8 @@
             }
         }
 
+            
+        
     </style>
 
 </head>
