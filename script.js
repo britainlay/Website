@@ -170,8 +170,8 @@ function updateGallery() {
         currentGallery[currentIndex];
 
 
-    galleryImage.src =
-        image.src;
+   galleryImage.src =
+       image.dataset.full || image.src;
 
 
     galleryImage.alt =
