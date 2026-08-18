@@ -33,11 +33,1074 @@
         rel="stylesheet"
     >
 
+
+    <style>
+
+        /* =====================================================
+           INVESTING PAGE
+        ===================================================== */
+
+        .investing-page {
+
+            padding-top: 120px;
+            padding-bottom: 100px;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .investing-hero {
+            max-width: 950px;
+            margin:
+                0 auto;
+            padding:
+                80px 20px 100px;
+            text-align:
+                center;
+        }
+
+
+        .investing-label {
+            display:
+                block;
+            margin-bottom:
+                15px;
+            color:
+                var(--green);
+            font-family:
+                "DM Sans",
+                sans-serif;
+            font-size:
+                .78rem;
+            font-weight:
+                700;
+            letter-spacing:
+                .14em;
+        }
+
+
+        .investing-hero h1 {
+            margin:
+                0 0 28px;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                clamp(3.5rem, 9vw, 7rem);
+            line-height:
+                .95;
+            letter-spacing:
+                -.06em;
+        }
+
+
+        .investing-hero h1 span {
+            color:
+                var(--green);
+        }
+
+
+        .investing-hero p {
+            max-width:
+                720px;
+            margin:
+                0 auto;
+            color:
+                var(--muted);
+            font-size:
+                clamp(1.05rem, 2vw, 1.3rem);
+            line-height:
+                1.75;
+        }
+
+
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
+
+        .investing-section {
+            max-width:
+                1050px;
+            margin:
+                0 auto;
+            padding:
+                100px 25px;
+        }
+
+
+        .investing-section-header {
+            margin-bottom:
+                45px;
+        }
+
+
+        .investing-number {
+            display:
+                block;
+            margin-bottom:
+                12px;
+            color:
+                var(--green);
+            font-family:
+                "DM Sans",
+                sans-serif;
+            font-size:
+                .78rem;
+            font-weight:
+                700;
+            line-height:
+                1.4;
+            letter-spacing:
+                .14em;
+            text-transform:
+                uppercase;
+        }
+
+
+        .investing-section-header h2 {
+            margin:
+                0;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                clamp(2rem, 5vw, 3.5rem);
+            line-height:
+                1.05;
+            letter-spacing:
+                -.04em;
+        }
+
+
+        .investing-section-header p {
+            max-width:
+                720px;
+            margin:
+                18px 0 0;
+            color:
+                var(--muted);
+            font-size:
+                1.05rem;
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           BASIC CONCEPTS
+        ===================================================== */
+
+        .concept-grid {
+
+            display:
+                grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap:
+                20px;
+        }
+
+
+        .concept-card {
+            padding:
+                30px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                20px;
+            background:
+                rgba(255,255,255,.025);
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+        }
+
+
+        .concept-card:hover {
+            transform:
+                translateY(-5px);
+            border-color:
+                rgba(82,214,156,.4);
+            background:
+                rgba(82,214,156,.035);
+        }
+
+
+        .concept-card h3 {
+            margin:
+                0 0 10px;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.35rem;
+        }
+
+
+        .concept-card p {
+            margin:
+                0;
+            color:
+                var(--muted);
+            line-height:
+                1.75;
+        }
+
+
+        /* =====================================================
+           MONEY FLOW
+        ===================================================== */
+
+        .investment-flow {
+            display:
+                flex;
+            align-items:
+                center;
+            justify-content:
+                center;
+            flex-wrap:
+                wrap;
+            gap:
+                15px;
+            margin-top:
+                35px;
+        }
+
+
+        .flow-box {
+            padding:
+                22px 28px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                16px;
+            text-align:
+                center;
+            background:
+                rgba(255,255,255,.025);
+        }
+
+
+        .flow-box strong {
+            display:
+                block;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.1rem;
+        }
+
+
+        .flow-box span {
+            display:
+                block;
+            margin-top:
+                5px;
+            color:
+                var(--muted);
+            font-size:
+                .85rem;
+        }
+
+
+        .flow-arrow {
+            color:
+                var(--green);
+            font-size:
+                1.5rem;
+        }
+
+
+        /* =====================================================
+           RISK & REWARD
+        ===================================================== */
+
+        .risk-layout {
+            display:
+                grid;
+            grid-template-columns:
+                1fr 1fr;
+            gap:
+                25px;
+        }
+
+
+        .risk-card {
+            padding:
+                35px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                20px;
+        }
+
+
+        .risk-card h3 {
+            margin:
+                0 0 12px;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.5rem;
+        }
+
+
+        .risk-card p {
+            color:
+                var(--muted);
+            line-height:
+                1.8;
+        }
+
+
+        .risk-bar {
+            margin-top:
+                25px;
+            height:
+                10px;
+            border-radius:
+                999px;
+            background:
+                linear-gradient(
+                    to right,
+                    rgba(82,214,156,.25),
+                    rgba(82,214,156,.95)
+                );
+        }
+
+
+        .risk-note {
+            margin-top:
+                15px;
+            color:
+                var(--muted);
+            font-size:
+                .85rem;
+            line-height:
+                1.6;
+        }
+
+
+        /* =====================================================
+           DIVERSIFICATION
+        ===================================================== */
+
+        .diversification-layout {
+            display:
+                grid;
+            grid-template-columns:
+                .9fr 1.1fr;
+            gap:
+                35px;
+            align-items:
+                center;
+        }
+
+
+        .portfolio-visual {
+            display:
+                grid;
+            grid-template-columns:
+                repeat(2, 1fr);
+            gap:
+                12px;
+        }
+
+
+        .portfolio-box {
+            min-height:
+                110px;
+            display:
+                flex;
+            flex-direction:
+                column;
+            align-items:
+                center;
+            justify-content:
+                center;
+            border:
+                1px solid var(--border);
+            border-radius:
+                18px;
+            background:
+                rgba(255,255,255,.025);
+        }
+
+
+        .portfolio-box strong {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+        }
+
+
+        .portfolio-box span {
+            margin-top:
+                5px;
+            color:
+                var(--muted);
+            font-size:
+                .8rem;
+        }
+
+
+        .diversification-text p {
+            color:
+                var(--muted);
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           LONG TERM
+        ===================================================== */
+
+        .long-term-box {
+            padding:
+                45px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                25px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(82,214,156,.08),
+                    rgba(255,255,255,.02)
+                );
+        }
+
+
+        .long-term-box h3 {
+            margin:
+                0 0 15px;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.8rem;
+        }
+
+
+        .long-term-box p {
+            max-width:
+                750px;
+            margin:
+                0;
+            color:
+                var(--muted);
+            font-size:
+                1.05rem;
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           INVESTING JOURNEY
+        ===================================================== */
+
+        .journey {
+            position:
+                relative;
+            margin-top:
+                20px;
+        }
+
+
+        .journey::before {
+            content:
+                "";
+            position:
+                absolute;
+            left:
+                24px;
+            top:
+                0;
+            bottom:
+                0;
+            width:
+                1px;
+            background:
+                var(--border);
+        }
+
+
+        .journey-item {
+            position:
+                relative;
+            display:
+                grid;
+            grid-template-columns:
+                50px 1fr;
+            gap:
+                25px;
+            margin-bottom:
+                45px;
+        }
+
+
+        .journey-dot {
+            position:
+                relative;
+            z-index:
+                2;
+            width:
+                50px;
+            height:
+                50px;
+            display:
+                flex;
+            align-items:
+                center;
+            justify-content:
+                center;
+            border:
+                1px solid var(--green);
+            border-radius:
+                50%;
+            background:
+                var(--bg);
+            color:
+                var(--green);
+            font-weight:
+                700;
+            font-size:
+                .72rem;
+        }
+
+
+        .journey-content {
+            padding-top:
+                3px;
+        }
+
+
+        .journey-date {
+            color:
+                var(--green);
+            font-size:
+                .75rem;
+            font-weight:
+                700;
+            letter-spacing:
+                .1em;
+        }
+
+
+        .journey-content h3 {
+            margin:
+                8px 0 10px;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.55rem;
+        }
+
+
+        .journey-content p {
+            max-width:
+                700px;
+            margin:
+                0;
+            color:
+                var(--muted);
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           COMPETITION CARDS
+        ===================================================== */
+
+        .competition-grid {
+            display:
+                grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap:
+                20px;
+        }
+
+
+        .competition-card {
+            position:
+                relative;
+            padding:
+                30px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                20px;
+            background:
+                rgba(255,255,255,.025);
+        }
+
+
+        .competition-card.featured {
+            border-color:
+                rgba(82,214,156,.45);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(82,214,156,.08),
+                    rgba(255,255,255,.02)
+                );
+        }
+
+
+        .competition-label {
+            color:
+                var(--green);
+            font-size:
+                .72rem;
+            font-weight:
+                700;
+            letter-spacing:
+                .12em;
+        }
+
+
+        .competition-card h3 {
+            margin:
+                12px 0;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.35rem;
+        }
+
+
+        .competition-card p {
+            color:
+                var(--muted);
+            line-height:
+                1.75;
+        }
+
+
+        .competition-result {
+            margin:
+                25px 0;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                2.5rem;
+            letter-spacing:
+                -.04em;
+        }
+
+
+        .competition-result span {
+            display:
+                block;
+            margin-top:
+                3px;
+            color:
+                var(--muted);
+            font-family:
+                "DM Sans",
+                sans-serif;
+            font-size:
+                .75rem;
+            letter-spacing:
+                .1em;
+        }
+
+
+        /* =====================================================
+           MY PERSPECTIVE
+        ===================================================== */
+
+        .perspective-grid {
+            display:
+                grid;
+            grid-template-columns:
+                1.2fr .8fr;
+            gap:
+                35px;
+            align-items:
+                center;
+        }
+
+
+        .perspective-quote {
+            padding:
+                40px;
+            border-left:
+                3px solid var(--green);
+            border-radius:
+                0 20px 20px 0;
+            background:
+                rgba(255,255,255,.025);
+        }
+
+
+        .perspective-quote p {
+            margin:
+                0;
+            font-size:
+                clamp(1.15rem, 2.3vw, 1.55rem);
+            line-height:
+                1.7;
+        }
+
+
+        .perspective-points {
+            display:
+                grid;
+            gap:
+                15px;
+        }
+
+
+        .perspective-point {
+            padding:
+                22px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                16px;
+        }
+
+
+        .perspective-point strong {
+            display:
+                block;
+            margin-bottom:
+                7px;
+        }
+
+
+        .perspective-point span {
+            color:
+                var(--muted);
+            line-height:
+                1.6;
+        }
+
+
+        /* =====================================================
+           BEGINNER ADVICE
+        ===================================================== */
+
+        .advice-box {
+            padding:
+                40px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                22px;
+            background:
+                rgba(255,255,255,.025);
+        }
+
+
+        .advice-box h3 {
+            margin:
+                0 0 15px;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.6rem;
+        }
+
+
+        .advice-box p {
+            max-width:
+                780px;
+            color:
+                var(--muted);
+            font-size:
+                1.05rem;
+            line-height:
+                1.8;
+        }
+
+
+        .advice-steps {
+            display:
+                grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+            gap:
+                12px;
+            margin-top:
+                30px;
+        }
+
+
+        .advice-step {
+            padding:
+                20px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                15px;
+            text-align:
+                center;
+        }
+
+
+        .advice-step strong {
+            display:
+                block;
+            color:
+                var(--green);
+            font-size:
+                .8rem;
+        }
+
+
+        .advice-step span {
+            display:
+                block;
+            margin-top:
+                7px;
+            font-weight:
+                600;
+        }
+
+
+        /* =====================================================
+           MISCONCEPTIONS
+        ===================================================== */
+
+        .misconception-grid {
+            display:
+                grid;
+            grid-template-columns:
+                repeat(2, 1fr);
+            gap:
+                20px;
+        }
+
+
+        .misconception {
+            padding:
+                30px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                18px;
+        }
+
+
+        .misconception .myth {
+            color:
+                var(--muted);
+            font-size:
+                .8rem;
+            font-weight:
+                700;
+            letter-spacing:
+                .1em;
+        }
+
+
+        .misconception h3 {
+            margin:
+                10px 0;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.25rem;
+        }
+
+
+        .misconception p {
+            margin:
+                0;
+            color:
+                var(--muted);
+            line-height:
+                1.75;
+        }
+
+
+        /* =====================================================
+           RESOURCES
+        ===================================================== */
+
+        .resource-grid {
+            display:
+                grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap:
+                20px;
+        }
+
+
+        .resource-card {
+            display:
+                flex;
+            flex-direction:
+                column;
+            justify-content:
+                space-between;
+            min-height:
+                220px;
+            padding:
+                28px;
+            border:
+                1px solid var(--border);
+            border-radius:
+                20px;
+            color:
+                inherit;
+            text-decoration:
+                none;
+            background:
+                rgba(255,255,255,.02);
+            transition:
+                transform .25s ease,
+                border-color .25s ease;
+        }
+
+
+        .resource-card:hover {
+            transform:
+                translateY(-5px);
+            border-color:
+                rgba(82,214,156,.45);
+        }
+
+
+        .resource-card h3 {
+            margin:
+                0 0 10px;
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+            font-size:
+                1.3rem;
+        }
+
+
+        .resource-card p {
+            margin:
+                0;
+            color:
+                var(--muted);
+            line-height:
+                1.7;
+        }
+
+
+        .resource-link {
+            margin-top:
+                25px;
+            color:
+                var(--green);
+            font-size:
+                .85rem;
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+            .concept-grid,
+            .competition-grid,
+            .resource-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .risk-layout,
+            .diversification-layout,
+            .perspective-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .advice-steps {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+            .investing-page {
+                padding-top:
+                    80px;
+            }
+
+            .investing-hero {
+                padding:
+                    60px 20px 70px;
+            }
+
+            .investing-section {
+                padding:
+                    70px 20px;
+            }
+
+
+            .journey::before {
+                left:
+                    19px;
+            }
+
+
+            .journey-item {
+                grid-template-columns:
+                    40px 1fr;
+                gap:
+                    18px;
+            }
+
+
+            .journey-dot {
+                width:
+                    40px;
+                height:
+                    40px;
+            }
+
+
+            .advice-steps {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .misconception-grid {
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="navbar">
 
@@ -47,7 +1110,7 @@
             href="../index.html"
             class="logo"
         >
-            Brighton L<span>.</span>
+            BL<span>.</span>
         </a>
 
 
@@ -59,87 +1122,1335 @@
         </a>
 
     </div>
+
 </header>
 
 
 
-<main>
+<main class="investing-page">
 
-<section class="section">
 
-    <div
-        class="section-container"
-        style="max-width: 850px;"
-    >
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        <span class="eyebrow">
-            FINANCIAL LITERACY / 02
+<section class="investing-hero">
+
+    <span class="investing-label">
+        FINANCIAL LITERACY / 02
+    </span>
+
+
+    <h1>
+        Investing<span>.</span>
+    </h1>
+
+    <p>
+        Understanding risk, research, and
+        long-term growth — and how my own
+        experience has shaped the way I think
+        about investing.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     01 — WHAT IS INVESTING?
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            01 — THE BASICS
         </span>
 
 
-        <h1
-            style="
-                font-family: 'Space Grotesk', sans-serif;
-                font-size: clamp(3rem, 7vw, 5rem);
-                line-height: 1;
-                letter-spacing: -.05em;
-                margin-bottom: 25px;
-            "
-        >
-            Investing
-        </h1>
+        <h2>
+            What is investing?
+        </h2>
 
+        <p>
+            Investing means putting money or
+            other resources into something with
+            the expectation that it may increase
+            in value or generate income over time.
 
-        <p
-            style="
-                color: var(--muted);
-                font-size: 1.15rem;
-                max-width: 700px;
-            "
-        >
-            A future financial literacy project by Brighton Le.
-            Content coming soon.
+            Unlike saving, investing involves
+            risk, and returns are never guaranteed.
         </p>
 
-
-        <div
-            style="
-                margin-top: 60px;
-                padding: 30px;
-                border: 1px solid var(--border);
-                border-radius: 18px;
-                background: rgba(255,255,255,.025);
-            "
-        >
-
-            <h2
-                style="
-                    font-family: 'Space Grotesk', sans-serif;
-                    margin-bottom: 15px;
-                "
-            >
-                Coming Soon
-            </h2>
+    </div>
 
 
-            <p
-                style="
-                    color: var(--muted);
-                    line-height: 1.8;
-                "
-            >
-                This page will eventually contain an article,
-                project, guide, infographic, calculator, or other
-                resource about budgeting.
+    <div class="concept-grid">
+
+
+        <div class="concept-card">
+
+            <h3>
+                Stocks
+            </h3>
+
+            <p>
+                A stock represents ownership in
+                a company. Investors may benefit
+                if the company's value increases,
+                but the investment can also lose
+                value.
+            </p>
+
+        </div>
+
+
+        <div class="concept-card">
+
+            <h3>
+                Bonds
+            </h3>
+
+            <p>
+                Bonds generally represent lending
+                money to an issuer in exchange for
+                interest payments and repayment
+                under specified terms.
+            </p>
+
+        </div>
+
+
+        <div class="concept-card">
+
+            <h3>
+                Funds
+            </h3>
+
+            <p>
+                Funds can hold collections of
+                investments, allowing investors
+                to gain exposure to multiple
+                assets through one investment.
             </p>
 
         </div>
     </div>
+
 </section>
+
+
+
+<!-- =====================================================
+     02 — WHY INVEST?
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            02 — THE BIG PICTURE
+        </span>
+
+
+        <h2>
+            Why do people invest?
+        </h2>
+
+        <p>
+            One reason people invest is to
+            potentially grow their money over
+            longer periods of time.
+
+            The idea can be simplified into
+            understanding how money today might
+            become more valuable in the future.
+        </p>
+
+    </div>
+
+
+    <div class="investment-flow">
+
+
+        <div class="flow-box">
+
+            <strong>
+                Money
+            </strong>
+
+            <span>
+                Today
+            </span>
+
+        </div>
+
+
+        <div class="flow-arrow">
+            →
+        </div>
+
+
+        <div class="flow-box">
+
+            <strong>
+                Investment
+            </strong>
+
+            <span>
+                Asset
+            </span>
+
+        </div>
+
+
+        <div class="flow-arrow">
+            →
+        </div>
+
+
+        <div class="flow-box">
+
+            <strong>
+                Time
+            </strong>
+
+            <span>
+                Growth potential
+            </span>
+
+        </div>
+
+
+        <div class="flow-arrow">
+            →
+        </div>
+
+
+        <div class="flow-box">
+
+            <strong>
+                Future Value
+            </strong>
+
+            <span>
+                Not guaranteed
+            </span>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     03 — RISK & REWARD
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            03 — RISK & REWARD
+        </span>
+
+
+        <h2>
+            Risk matters.
+        </h2>
+
+        <p>
+            Investing always involves uncertainty.
+            Understanding how much risk you're
+            taking is just as important as thinking
+            about potential returns.
+        </p>
+
+    </div>
+
+
+    <div class="risk-layout">
+
+
+        <div class="risk-card">
+
+            <h3>
+                Potential return
+            </h3>
+
+            <p>
+                Investments can potentially grow
+                in value or generate income, but
+                higher potential returns generally
+                come with greater uncertainty.
+            </p>
+
+
+            <div class="risk-bar"></div>
+
+
+            <div class="risk-note">
+
+                Potential returns are not guaranteed.
+
+            </div>
+        </div>
+
+
+        <div class="risk-card">
+
+            <h3>
+                The risk you take
+            </h3>
+
+
+            <p>
+                The value of an investment can fall
+                as well as rise. Understanding
+                volatility and the possibility of
+                loss is an important part of making
+                informed decisions.
+            </p>
+
+
+            <div class="risk-bar"></div>
+
+
+            <div class="risk-note">
+
+                Past performance does not guarantee
+                future results.
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04 — DIVERSIFICATION
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            04 — DIVERSIFICATION
+        </span>
+
+
+        <h2>
+            Don't depend on one investment.
+        </h2>
+
+    </div>
+
+
+    <div class="diversification-layout">
+
+
+        <div class="portfolio-visual">
+
+
+            <div class="portfolio-box">
+
+                <strong>
+                    Stocks
+                </strong>
+
+                <span>
+                    Ownership
+                </span>
+
+            </div>
+
+
+            <div class="portfolio-box">
+
+                <strong>
+                    Bonds
+                </strong>
+
+                <span>
+                    Debt
+                </span>
+
+            </div>
+
+
+            <div class="portfolio-box">
+
+                <strong>
+                    Funds
+                </strong>
+
+                <span>
+                    Diversified exposure
+                </span>
+
+            </div>
+
+
+            <div class="portfolio-box">
+
+                <strong>
+                    Cash
+                </strong>
+
+                <span>
+                    Liquidity
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="diversification-text">
+
+            <p>
+                Diversification means spreading
+                investments across different assets
+                rather than relying entirely on one.
+            </p>
+
+
+            <p>
+                The goal is not to eliminate risk.
+                Instead, diversification can help
+                reduce the impact that one investment
+                may have on an overall portfolio.
+            </p>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05 — LONG TERM THINKING
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            05 — LONG-TERM THINKING
+        </span>
+
+
+        <h2>
+            Investing isn't just about today.
+        </h2>
+
+    </div>
+
+
+    <div class="long-term-box">
+
+        <h3>
+            Think beyond the next market move.
+        </h3>
+
+
+        <p>
+            Investing can involve looking beyond
+            short-term price changes and thinking
+            about goals, time horizons, risk, and
+            strategy.
+
+            There will always be uncertainty in
+            financial markets, which is why having
+            a foundation and a plan matters.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06 — MY INVESTING JOURNEY
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            06 — MY JOURNEY
+        </span>
+
+
+        <h2>
+            How I got interested in investing.
+        </h2>
+
+        <p>
+            My interest in investing started
+            earlier than I expected and has
+            continued to grow through competitions,
+            research, and experience.
+        </p>
+
+    </div>
+
+
+    <div class="journey">
+
+
+        <div class="journey-item">
+
+            <div class="journey-dot">
+                8TH
+            </div>
+
+
+            <div class="journey-content">
+
+                <span class="journey-date">
+                    STARTING POINT
+                </span>
+
+
+                <h3>
+                    Discovering investing
+                </h3>
+
+
+                <p>
+                    At the start of 8th grade,
+                    investing caught my attention
+                    through Cash App's investing
+                    section, which required sponsor
+                    approval.
+
+                    That experience introduced me
+                    to the idea that investing was
+                    something I could actually learn
+                    about.
+                </p>
+
+            </div>
+        </div>
+
+
+
+        <div class="journey-item">
+
+            <div class="journey-dot">
+                2025
+            </div>
+
+
+            <div class="journey-content">
+
+                <span class="journey-date">
+                    WHARTON INVESTMENT COMPETITION
+                </span>
+
+
+                <h3>
+                    Learning to invest around a client
+                </h3>
+
+
+                <p>
+                    In the Wharton Investment
+                    Competition, my team worked with
+                    an imaginary client based on
+                    their goals.
+
+                    We developed an investment
+                    strategy around the client's
+                    needs rather than simply trying
+                    to maximize returns.
+                </p>
+
+            </div>
+        </div>
+
+
+
+        <div class="journey-item">
+
+            <div class="journey-dot">
+                2026
+            </div>
+
+
+            <div class="journey-content">
+
+                <span class="journey-date">
+                    BENTLEY INVESTMENT COMPETITION
+                </span>
+
+
+                <h3>
+                    Going deeper into the market
+                </h3>
+
+                <p>
+                    During the Bentley Investment
+                    Competition in summer 2026,
+                    I became more involved in
+                    researching the stock market,
+                    including learning about
+                    different financial ratios and
+                    ways to evaluate investments.
+                </p>
+
+            </div>
+        </div>
+
+
+
+        <div class="journey-item">
+
+            <div class="journey-dot">
+                NOW
+            </div>
+
+
+            <div class="journey-content">
+
+                <span class="journey-date">
+                    CONTINUING TO LEARN
+                </span>
+
+
+                <h3>
+                    Still building my experience
+                </h3>
+
+                <p>
+                    I'm still learning about
+                    investing and want to continue
+                    growing my experience as I move
+                    into college and eventually into
+                    a career in finance.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07 — COMPETITIONS
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            07 — COMPETITION EXPERIENCE
+        </span>
+
+
+        <h2>
+            Learning through competition.
+        </h2>
+
+
+        <p>
+            Competitions gave me an opportunity
+            to apply financial concepts in
+            situations where decisions had
+            consequences.
+        </p>
+
+    </div>
+
+
+    <div class="competition-grid">
+
+
+        <div class="competition-card">
+
+            <span class="competition-label">
+                2025
+            </span>
+
+
+            <h3>
+                Wharton Investment Competition
+            </h3>
+
+
+            <p>
+                Worked as a team to create an
+                investment strategy for an
+                imaginary client based on
+                their individual goals and needs.
+            </p>
+
+        </div>
+
+
+
+        <div class="competition-card featured">
+
+            <span class="competition-label">
+                SUMMER 2026
+            </span>
+
+
+            <h3>
+                Bentley Investment Competition
+            </h3>
+
+
+            <div class="competition-result">
+
+                13 / 387
+
+                <span>
+                    PARTICIPANTS
+                </span>
+
+            </div>
+
+
+            <p>
+                This competition pushed me to
+                spend more time researching the
+                stock market and learning about
+                financial ratios and different
+                ways of evaluating investments.
+            </p>
+
+        </div>
+
+
+
+        <div class="competition-card">
+
+            <span class="competition-label">
+                EXPERIENCE
+            </span>
+
+
+            <h3>
+                Stock Market Experience
+            </h3>
+
+            <p>
+                Another opportunity to practice
+                investing over a set period while
+                learning more about the stock
+                market and making investment
+                decisions.
+            </p>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     08 — WHAT I LEARNED
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            08 — WHAT I LEARNED
+        </span>
+
+
+        <h2>
+            Strategy starts with a foundation.
+        </h2>
+
+    </div>
+
+
+    <div class="perspective-grid">
+
+
+        <div class="perspective-quote">
+
+            <p>
+                These competitions taught me that
+                having a foundational plan is
+                important when trying to achieve
+                a goal.
+
+                In the Wharton competition, that
+                meant understanding our client's
+                needs. In the other competitions,
+                it meant learning more about the
+                market and making informed
+                decisions.
+            </p>
+
+        </div>
+
+
+        <div class="perspective-points">
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    01 — Have a plan
+                </strong>
+
+                <span>
+                    A goal is easier to pursue when
+                    you understand the strategy
+                    behind it.
+                </span>
+
+            </div>
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    02 — Do your research
+                </strong>
+
+                <span>
+                    Understanding what you're
+                    investing in matters.
+                </span>
+
+            </div>
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    03 — Keep learning
+                </strong>
+
+                <span>
+                    I'm still developing my
+                    knowledge and experience.
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     09 — MY PERSPECTIVE
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            09 — MY PERSPECTIVE
+        </span>
+
+
+        <h2>
+            Investing is learnable.
+        </h2>
+
+    </div>
+
+
+    <div class="perspective-grid">
+
+
+        <div class="perspective-quote">
+
+            <p>
+                When I first became interested
+                in investing, I thought it was
+                something only extremely
+                knowledgeable or wealthy people
+                could do.
+
+                Over time, I realized that
+                investing is something anyone can
+                learn about. You don't have to
+                know everything on day one.
+            </p>
+
+        </div>
+
+
+        <div class="perspective-points">
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    Start with the basics
+                </strong>
+
+                <span>
+                    Build your understanding before
+                    trying to make complicated
+                    decisions.
+                </span>
+
+            </div>
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    Practice
+                </strong>
+
+                <span>
+                    Simulators can provide a way
+                    to explore the market without
+                    immediately putting real money
+                    at risk.
+                </span>
+
+            </div>
+
+
+            <div class="perspective-point">
+
+                <strong>
+                    Keep growing
+                </strong>
+
+                <span>
+                    I'm still learning and want to
+                    continue developing my investing
+                    experience.
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     10 — ADVICE TO BEGINNERS
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            10 — FOR BEGINNERS
+        </span>
+
+
+        <h2>
+            Where should you start?
+        </h2>
+
+    </div>
+
+
+    <div class="advice-box">
+
+        <h3>
+            Learn before you leap.
+        </h3>
+
+        <p>
+            If you're interested in investing,
+            I think the best place to start is by
+            learning the basics.
+
+            There are a lot of resources online,
+            including YouTube, that can help you
+            understand how the stock market works.
+
+            I also recommend using a simulator to
+            practice and explore different
+            investments without putting real
+            money at risk.
+
+            From there, you can explore the stock
+            market, research companies, and
+            continue learning as you gain
+            experience.
+        </p>
+
+
+        <div class="advice-steps">
+
+
+            <div class="advice-step">
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    Learn
+                </span>
+
+            </div>
+
+
+            <div class="advice-step">
+
+                <strong>
+                    02
+                </strong>
+
+                <span>
+                    Practice
+                </span>
+
+            </div>
+
+
+            <div class="advice-step">
+
+                <strong>
+                    03
+                </strong>
+
+                <span>
+                    Explore
+                </span>
+
+            </div>
+
+
+            <div class="advice-step">
+
+                <strong>
+                    04
+                </strong>
+
+                <span>
+                    Keep Learning
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     11 — COMMON MISCONCEPTIONS
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            11 — MISCONCEPTIONS
+        </span>
+
+
+        <h2>
+            What investing isn't.
+        </h2>
+
+    </div>
+
+
+    <div class="misconception-grid">
+
+
+        <div class="misconception">
+
+            <span class="myth">
+                MISCONCEPTION
+            </span>
+
+
+            <h3>
+                "You need to be rich to invest."
+            </h3>
+
+
+            <p>
+                Investing can involve different
+                amounts of money and different
+                levels of risk. Learning about
+                investing doesn't require being
+                wealthy.
+            </p>
+
+        </div>
+
+
+
+        <div class="misconception">
+
+            <span class="myth">
+                MISCONCEPTION
+            </span>
+
+
+            <h3>
+                "Investing is a quick way to get rich."
+            </h3>
+
+
+            <p>
+                Markets can move unpredictably,
+                and investments can lose value.
+                Long-term financial planning is
+                more complicated than chasing
+                quick returns.
+            </p>
+
+        </div>
+
+
+
+        <div class="misconception">
+
+            <span class="myth">
+                MISCONCEPTION
+            </span>
+
+
+            <h3>
+                "Someone online knows exactly what
+                will happen."
+            </h3>
+
+
+            <p>
+                Financial content online should
+                be evaluated carefully. Nobody can
+                guarantee how a particular
+                investment will perform.
+            </p>
+
+        </div>
+
+
+
+        <div class="misconception">
+
+            <span class="myth">
+                MISCONCEPTION
+            </span>
+
+
+            <h3>
+                "You have to know everything first."
+            </h3>
+
+            <p>
+                Learning is a process. Building a
+                foundation and gradually expanding
+                your knowledge can be more useful
+                than waiting until you feel like
+                an expert.
+            </p>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     12 — RESOURCES
+===================================================== -->
+
+<section class="investing-section">
+
+    <div class="investing-section-header">
+
+        <span class="investing-number">
+            12 — EXPLORE FURTHER
+        </span>
+
+
+        <h2>
+            Learn from reliable sources.
+        </h2>
+
+
+        <p>
+            Investing information is everywhere,
+            but not all sources are equally
+            reliable. These organizations provide
+            educational information that can help
+            you continue learning.
+        </p>
+
+    </div>
+
+
+    <div class="resource-grid">
+
+
+        <a
+            href="https://www.investor.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    Investor.gov
+                </h3>
+
+
+                <p>
+
+                    Educational resources from the
+                    U.S. Securities and Exchange
+                    Commission for investors.
+
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore Investor.gov ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.finra.org/investors"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    FINRA
+                </h3>
+
+                <p>
+                    Investor education and tools
+                    covering investing, risk,
+                    fraud awareness, and more.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore FINRA ↗
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="https://www.sec.gov/investor"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+        >
+
+            <div>
+
+                <h3>
+                    U.S. SEC
+                </h3>
+
+
+                <p>
+                    Information and resources
+                    designed to help investors
+                    understand financial markets.
+                </p>
+
+            </div>
+
+
+            <span class="resource-link">
+                Explore the SEC ↗
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISCLAIMER
+===================================================== -->
+
+<section
+    class="investing-section"
+    style="
+        padding-top: 20px;
+        text-align: center;
+    "
+>
+
+    <p
+        style="
+            max-width: 750px;
+            margin: 0 auto;
+            color: var(--muted);
+            line-height: 1.8;
+        "
+    >
+
+        This page is intended for educational
+        purposes only and does not provide
+        personalized financial or investment
+        advice.
+    </p>
+
+</section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -151,6 +2462,7 @@
                 Brighton Le<span>.</span>
             </strong>
 
+
             <p>
                 Finance • Technology • Impact
             </p>
@@ -159,10 +2471,10 @@
 
 
         <a
-            href="../index.html"
+            href="../index.html#finance"
             class="nav-contact"
         >
-            Back Home
+            Back to Financial Literacy
         </a>
 
     </div>
